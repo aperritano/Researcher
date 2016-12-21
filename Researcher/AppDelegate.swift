@@ -13,7 +13,7 @@ import RealmSwift
 
 var realm: Realm?
 
-let SCHEMEA_VER: UInt64 = 1
+let SCHEMEA_VER: UInt64 = 3
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -38,12 +38,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let rootViewController = storyboard.instantiateViewController(withIdentifier: "paperSessionUITableViewController") as! PaperSessionUITableViewController
         
         
-        let toolbarController = AppToolbarController(rootViewController: rootViewController)
         
-        let menuController = AppMenuController(rootViewController: toolbarController)
+        let menuController = AppMenuController(rootViewController: rootViewController)
+        
+    
+
+        let app = AppNavigationController(rootViewController: menuController)
+        
+        let statusBar = AppStatusBarController(rootViewController: app)
+        let snackBar = AppSnackbarController(rootViewController: statusBar)
 
         
-        window!.rootViewController = menuController
+        window!.rootViewController = snackBar
         window!.makeKeyAndVisible()
         
 //        UIApplication.shared.statusBarStyle = .default

@@ -1,12 +1,31 @@
 import Foundation
 import RealmSwift
 
+class PaperCollection: Object {
+    dynamic var id = UUID().uuidString
+    dynamic var last_modified = Date()
+    dynamic var title = ""
+    let isFav = RealmOptional<Bool>()
+    var papers = List<PaperSession>()
+    
+    let labelsCount = RealmOptional<Int>()
+    let likeCount = RealmOptional<Int>()
+
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+}
+
 class PaperSession: Object {
     
     dynamic var id = UUID().uuidString
     dynamic var last_modified = Date()
-    dynamic var name = ""
     dynamic var title = ""
+    
+    let likesCount = RealmOptional<Int>()
+    let favCount = RealmOptional<Int>()
+    let totalLikes = RealmOptional<Int>()
     var papers = List<Paper>()
 
     override static func primaryKey() -> String? {
@@ -32,10 +51,6 @@ class Paper: Object {
     dynamic var entryType = ""
     dynamic var inProceeding = ""
     dynamic var isbn = ""
-    
-    let isLiked = RealmOptional<Bool>()
-    let isRead = RealmOptional<Bool>()
-    
     dynamic var keywords = ""
     dynamic var location = ""
     dynamic var numpages = ""
@@ -50,6 +65,10 @@ class Paper: Object {
     dynamic var volume = ""
     dynamic var year = ""
     
+    let isLiked = RealmOptional<Bool>()
+    let isRead = RealmOptional<Bool>()
+    let isFav = RealmOptional<Bool>()
+    
     override static func primaryKey() -> String? {
         return "id"
     }
@@ -59,6 +78,10 @@ extension Realm {
     
     var paperSessions: Results<PaperSession> {
         return objects(PaperSession.self)
+    }
+    
+    var paperCollections: Results<PaperCollection> {
+        return objects(PaperCollection.self)
     }
     
     var papers: Results<Paper> {

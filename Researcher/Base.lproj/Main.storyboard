@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D12b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D17a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="142"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lq0-Jl-tGC" id="zHt-Og-JQ8">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="141.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="141"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="o5m-8e-qBs">
@@ -39,7 +40,7 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="185.5" height="85"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHI" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IB1-f3-8OW">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="185.5" height="85"/>
+                                                                            <rect key="frame" x="10" y="0.0" width="44.5" height="85"/>
                                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -47,16 +48,37 @@
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <constraints>
+                                                                        <constraint firstItem="IB1-f3-8OW" firstAttribute="leading" secondItem="Upo-1Q-B89" secondAttribute="leading" constant="10" id="97Y-kc-2TM"/>
                                                                         <constraint firstItem="IB1-f3-8OW" firstAttribute="centerY" secondItem="Upo-1Q-B89" secondAttribute="centerY" id="DxG-MR-cmT"/>
-                                                                        <constraint firstItem="IB1-f3-8OW" firstAttribute="centerX" secondItem="Upo-1Q-B89" secondAttribute="centerX" id="Paf-L3-30Z"/>
-                                                                        <constraint firstItem="IB1-f3-8OW" firstAttribute="width" secondItem="Upo-1Q-B89" secondAttribute="width" id="U5a-HA-LeF"/>
                                                                         <constraint firstItem="IB1-f3-8OW" firstAttribute="height" secondItem="Upo-1Q-B89" secondAttribute="height" id="hcC-Vb-8Ov"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="IB1-f3-8OW" secondAttribute="trailing" id="vOG-wk-JYf"/>
                                                                     </constraints>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIk-uD-YKf">
                                                                     <rect key="frame" x="185.5" y="0.0" width="185.5" height="85"/>
+                                                                    <subviews>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Nfh-nz-WWa">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="186" height="85"/>
+                                                                            <subviews>
+                                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZi-Je-G54">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="186" height="42.5"/>
+                                                                                    <state key="normal" title="0" image="cm_add_white">
+                                                                                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    </state>
+                                                                                </button>
+                                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pau-t3-UVP">
+                                                                                    <rect key="frame" x="0.0" y="42.5" width="186" height="42.5"/>
+                                                                                    <state key="normal" title="5 Labels : 365 Papers"/>
+                                                                                </button>
+                                                                            </subviews>
+                                                                        </stackView>
+                                                                    </subviews>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="Nfh-nz-WWa" firstAttribute="centerX" secondItem="jIk-uD-YKf" secondAttribute="centerX" id="S3A-Tu-PNV"/>
+                                                                        <constraint firstItem="Nfh-nz-WWa" firstAttribute="centerY" secondItem="jIk-uD-YKf" secondAttribute="centerY" id="eLT-z6-6kF"/>
+                                                                        <constraint firstItem="Nfh-nz-WWa" firstAttribute="width" secondItem="jIk-uD-YKf" secondAttribute="width" id="hYF-lo-cWN"/>
+                                                                        <constraint firstItem="Nfh-nz-WWa" firstAttribute="height" secondItem="jIk-uD-YKf" secondAttribute="height" id="mft-XA-CVy"/>
+                                                                    </constraints>
                                                                 </view>
                                                             </subviews>
                                                         </stackView>
@@ -72,52 +94,84 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJO-H1-fZp" userLabel="ToolbarView">
                                                     <rect key="frame" x="2" y="87" width="371" height="53"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="fcw-nF-BSQ">
+                                                        <stackView opaque="NO" tag="2" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fcw-nF-BSQ">
                                                             <rect key="frame" x="0.0" y="0.0" width="371" height="53"/>
                                                             <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7q-gu-rll" customClass="FabButton" customModule="Material">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="45" height="53"/>
-                                                                    <state key="normal" title="export"/>
-                                                                    <userDefinedRuntimeAttributes>
-                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                            <real key="value" value="0.0"/>
-                                                                        </userDefinedRuntimeAttribute>
-                                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                            <real key="value" value="0.0"/>
-                                                                        </userDefinedRuntimeAttribute>
-                                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                                            <real key="value" value="0.0"/>
-                                                                        </userDefinedRuntimeAttribute>
-                                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                                            <real key="value" value="0.0"/>
-                                                                        </userDefinedRuntimeAttribute>
-                                                                    </userDefinedRuntimeAttributes>
-                                                                </button>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXR-nW-zOX">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="123.5" height="53"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7q-gu-rll" customClass="FabButton" customModule="Material">
+                                                                            <rect key="frame" x="40" y="4" width="45" height="45"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" secondItem="U7q-gu-rll" secondAttribute="height" multiplier="1:1" id="Rdk-RH-mlE"/>
+                                                                                <constraint firstAttribute="width" constant="45" id="hST-Mg-sH1"/>
+                                                                            </constraints>
+                                                                            <state key="normal" title="export"/>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="0.0"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                    <real key="value" value="0.0"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                                    <real key="value" value="0.0"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                                    <real key="value" value="0.0"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </button>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="U7q-gu-rll" firstAttribute="centerX" secondItem="KXR-nW-zOX" secondAttribute="centerX" id="CKU-9H-ghN"/>
+                                                                        <constraint firstItem="U7q-gu-rll" firstAttribute="centerY" secondItem="KXR-nW-zOX" secondAttribute="centerY" id="SkS-Lf-2t4"/>
+                                                                    </constraints>
+                                                                </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="updated: 12/14/16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbi-TB-vzF">
-                                                                    <rect key="frame" x="135" y="0.0" width="109" height="53"/>
+                                                                    <rect key="frame" x="123.5" y="0.0" width="124" height="53"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCK-8v-eQ7" customClass="FabButton" customModule="Material">
-                                                                    <rect key="frame" x="341" y="0.0" width="30" height="53"/>
-                                                                    <state key="normal" title="fav"/>
-                                                                    <userDefinedRuntimeAttributes>
-                                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                            <real key="value" value="0.0"/>
-                                                                        </userDefinedRuntimeAttribute>
-                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                            <real key="value" value="0.0"/>
-                                                                        </userDefinedRuntimeAttribute>
-                                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                                            <real key="value" value="0.0"/>
-                                                                        </userDefinedRuntimeAttribute>
-                                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                                            <real key="value" value="0.0"/>
-                                                                        </userDefinedRuntimeAttribute>
-                                                                    </userDefinedRuntimeAttributes>
-                                                                </button>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DN7-2Y-ggT">
+                                                                    <rect key="frame" x="247.5" y="0.0" width="123.5" height="53"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCK-8v-eQ7" customClass="FabButton" customModule="Material">
+                                                                            <rect key="frame" x="38.5" y="4" width="45" height="45"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" secondItem="kCK-8v-eQ7" secondAttribute="height" multiplier="1:1" id="T5t-Oh-vkL"/>
+                                                                                <constraint firstAttribute="width" constant="45" id="W25-Cp-Xxy"/>
+                                                                            </constraints>
+                                                                            <state key="normal" title="fav"/>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                    <real key="value" value="0.0"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="0.0"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                                    <real key="value" value="0.0"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                                    <real key="value" value="0.0"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </button>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="kCK-8v-eQ7" firstAttribute="centerY" secondItem="DN7-2Y-ggT" secondAttribute="centerY" id="i5I-Hb-aJY"/>
+                                                                        <constraint firstItem="kCK-8v-eQ7" firstAttribute="centerX" secondItem="DN7-2Y-ggT" secondAttribute="centerX" id="sb0-Ls-HC1"/>
+                                                                    </constraints>
+                                                                </view>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="KXR-nW-zOX" firstAttribute="height" secondItem="fcw-nF-BSQ" secondAttribute="height" id="Zye-NQ-0jB"/>
+                                                                <constraint firstItem="DN7-2Y-ggT" firstAttribute="height" secondItem="fcw-nF-BSQ" secondAttribute="height" id="ahA-HG-f03"/>
+                                                            </constraints>
                                                         </stackView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -146,6 +200,7 @@
                                     <outlet property="shareButton" destination="U7q-gu-rll" id="hh8-5r-1Qz"/>
                                     <outlet property="timestampLabel" destination="gbi-TB-vzF" id="eNO-ge-pIa"/>
                                     <outlet property="titleLabel" destination="IB1-f3-8OW" id="7cw-UA-cHF"/>
+                                    <segue destination="zlo-Og-kGr" kind="show" id="RX2-15-Quj"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -157,7 +212,28 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VRp-e8-6Ns" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-127.2" y="77.811094452773617"/>
+            <point key="canvasLocation" x="263" y="-99"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yOE-gG-a3t">
+            <objects>
+                <viewController id="zlo-Og-kGr" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gz9-I2-e9h"/>
+                        <viewControllerLayoutGuide type="bottom" id="11q-pg-1ko"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fZL-wk-QZY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dvQ-6i-ivK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1105" y="-68"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cm_add_white" width="24" height="24"/>
+    </resources>
 </document>

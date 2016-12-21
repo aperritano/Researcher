@@ -82,10 +82,14 @@ extension RootViewController {
     
     fileprivate func prepareMenuButton() {
         menuButton = IconButton(image: Icon.cm.menu)
+        menuButton.tintColor = .white
+
     }
     
     fileprivate func prepareStarButton() {
         starButton = IconButton(image: Icon.cm.star)
+        starButton.tintColor = .white
+
     }
     
     fileprivate func prepareSearchButton() {

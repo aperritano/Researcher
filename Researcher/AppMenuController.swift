@@ -13,9 +13,20 @@ class AppMenuController: MenuController {
         prepareMenu()
     }
     
+    fileprivate var menuButton: IconButton!
+    fileprivate var starButton: IconButton!
+    fileprivate var searchButton: IconButton!
+    
+    fileprivate var nextButton: FlatButton!
+    
     open override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Color.grey.lighten5
+        
+        prepareMenuButton()
+        prepareStarButton()
+        prepareSearchButton()
+        prepareNavigationItem()
     }
     
     open override func openMenu(completion: ((UIView) -> Void)? = nil) {
@@ -28,6 +39,41 @@ class AppMenuController: MenuController {
         menu.views.first?.animate(animation: Motion.rotate(angle: 0))
     }
 }
+
+extension AppMenuController {
+    fileprivate func prepareMenuButton() {
+        menuButton = IconButton(image: Icon.cm.menu)
+        menuButton.tintColor = .white
+
+    }
+    
+    fileprivate func prepareStarButton() {
+        starButton = IconButton(image: Icon.cm.star)
+        starButton.tintColor = .white
+
+    }
+    
+    fileprivate func prepareSearchButton() {
+        searchButton = IconButton(image: Icon.cm.search)
+        searchButton.tintColor = .white
+    }
+    
+    fileprivate func prepareNavigationItem() {
+        navigationItem.title = "PapersX"
+        //navigationItem.detail = "Build Beautiful Software"
+        
+        navigationItem.titleLabel.textColor = .white
+        navigationItem.titleLabel.textAlignment = .left
+        
+        navigationItem.detailLabel.textColor = .white
+        navigationItem.detailLabel.textAlignment = .left
+        
+        navigationItem.leftViews = [starButton]
+        navigationItem.rightViews = [searchButton]
+    }
+    
+}
+
 
 extension AppMenuController {
     fileprivate func prepareMenu() {
