@@ -32,6 +32,10 @@ import UIKit
 import Material
 
 class RootViewController: UIViewController {
+    
+    fileprivate var addButton: FabButton!
+    fileprivate var penMenuItem: MenuItem!
+    
     fileprivate var menuButton: IconButton!
     fileprivate var starButton: IconButton!
     fileprivate var searchButton: IconButton!
@@ -44,17 +48,38 @@ class RootViewController: UIViewController {
     
     open override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Color.grey.lighten5
+        //view.backgroundColor = Color.grey.lighten5.withAlphaComponent(0.5)
         
-        prepareMenuButton()
-        prepareStarButton()
-        prepareSearchButton()
-        prepareNavigationItem()
-        prepareNextButton()
+
+        prepareAddButton()
+        prepareAddPaperButton()
+    }
+
+    open override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        prepareMenuController()
     }
 }
 
 extension RootViewController {
+    
+    fileprivate func prepareAddButton() {
+        addButton = FabButton(image: Icon.cm.add, tintColor: .white)
+        addButton.pulseColor = .white
+        addButton.backgroundColor = Color.red.base
+        addButton.addTarget(self, action: #selector(handleToggleMenu), for: .touchUpInside)
+    }
+    
+    fileprivate func prepareAddPaperButton() {
+        penMenuItem = MenuItem()
+        penMenuItem.button.image = Icon.cm.pen
+        penMenuItem.button.tintColor = .white
+        penMenuItem.button.pulseColor = .white
+        penMenuItem.button.backgroundColor = Color.green.base
+        penMenuItem.button.depthPreset = .depth1
+        penMenuItem.title = "Import Papers (RIS File)"
+    }
+    
     fileprivate func prepareMenuButton() {
         menuButton = IconButton(image: Icon.cm.menu)
     }
@@ -75,6 +100,15 @@ extension RootViewController {
 //        navigationItem.rightViews = [starButton, searchButton]
     }
     
+    fileprivate func prepareMenuController() {
+        guard let mc = menuController as? AppMenuController else {
+            return
+        }
+        
+        mc.menu.delegate = self
+        mc.menu.views = [addButton, penMenuItem]
+    }
+    
     fileprivate func prepareNextButton() {
         nextButton = FlatButton()
         nextButton.pulseAnimation = .none
@@ -89,3 +123,39 @@ extension RootViewController {
         navigationController?.pushViewController(NextViewController(), animated: true)
     }
 }
+
+extension RootViewController {
+    @objc
+    fileprivate func handleToggleMenu(button: Button) {
+        guard let mc = menuController as? AppMenuController else {
+            return
+        }
+        
+        if mc.menu.isOpened {
+            mc.closeMenu { (view) in
+                (view as? MenuItem)?.hideTitleLabel()
+            }
+        } else {
+            mc.openMenu { (view) in
+                (view as? MenuItem)?.showTitleLabel()
+            }
+        }
+    }
+}
+
+extension RootViewController: MenuDelegate {
+    func menu(menu: Menu, tappedAt point: CGPoint, isOutside: Bool) {
+        guard isOutside else {
+            return
+        }
+        
+        guard let mc = menuController as? AppMenuController else {
+            return
+        }
+        
+        mc.closeMenu { (view) in
+            (view as? MenuItem)?.hideTitleLabel()
+        }
+    }
+}
+

@@ -1,6 +1,19 @@
 import Foundation
 import RealmSwift
 
+class PaperSession: Object {
+    
+    dynamic var id = UUID().uuidString
+    dynamic var last_modified = Date()
+    dynamic var name = ""
+    dynamic var title = ""
+    var papers = List<Paper>()
+
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+}
+
 class Paper: Object {
     
     dynamic var id = UUID().uuidString
@@ -42,6 +55,17 @@ class Paper: Object {
     }
 }
 
+extension Realm {
+    
+    var paperSessions: Results<PaperSession> {
+        return objects(PaperSession.self)
+    }
+    
+    var papers: Results<Paper> {
+        return objects(Paper.self)
+    }
+    
+}
 
 // MARK: object extension for
 extension Object {

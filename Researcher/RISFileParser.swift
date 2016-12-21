@@ -26,18 +26,18 @@ class RISFileParser {
         return false
     }
 
-//    class func readFile(_ filePath: String) -> [[String:AnyObject]] {
-//        var lines = [String]()
-//        do {
-//            // Get the contents
-//            let contents = try NSString(contentsOfFile: filePath, encoding: String.Encoding.utf8.rawValue)
-//            lines = contents.components(separatedBy: "\n")
-//
-//        } catch let error as NSError {
-//            ULONG.debug("Ooops! Something went wrong: \(error)")
-//        }
-//        return parseLines(lines)
-//    }
+    class func readFile(_ filePath: String) -> [[String:AnyObject]] {
+        var lines = [String]()
+        do {
+            // Get the contents
+            let contents = try NSString(contentsOfFile: filePath, encoding: String.Encoding.utf8.rawValue)
+            lines = contents.components(separatedBy: "\n")
+
+        } catch let error as NSError {
+            LOG.debug("Ooops! Something went wrong: \(error)")
+        }
+        return parseLines(lines)
+    }
 //
 //    class func writeRISFile(_ papers: [PaperEntry], filePath: String) {
 //        if papers.count > 0 {

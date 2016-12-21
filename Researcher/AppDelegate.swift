@@ -13,7 +13,7 @@ import RealmSwift
 
 var realm: Realm?
 
-let SCHEMEA_VER: UInt64 = 5
+let SCHEMEA_VER: UInt64 = 1
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,16 +25,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setDefaultRealm()
         
         
+        self.testData()
+        
         window = UIWindow(frame:UIScreen.main.bounds)
+        
+//        let pageTabBarController = AppPageTabBarController(viewControllers: viewControllers, selectedIndex: 0)
+  
+  
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let rootViewController = storyboard.instantiateViewController(withIdentifier: "rootViewController") as! RootViewController
+        let rootViewController = storyboard.instantiateViewController(withIdentifier: "paperSessionUITableViewController") as! PaperSessionUITableViewController
         
-        window!.rootViewController = AppNavigationController(rootViewController: rootViewController)
+        
+        let toolbarController = AppToolbarController(rootViewController: rootViewController)
+        
+        let menuController = AppMenuController(rootViewController: toolbarController)
+
+        
+        window!.rootViewController = menuController
         window!.makeKeyAndVisible()
         
-        UIApplication.shared.statusBarStyle = .default
+//        UIApplication.shared.statusBarStyle = .default
         
         return true
     }
@@ -64,7 +76,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             config.fileURL = testRealmURL
             
             
-            try! realm = Realm(configuration: config)
+            realm = try! Realm(configuration: config)
         } else {
             
             
@@ -91,11 +103,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // Set this as the configuration used for the default Realm
             //Realm.Configuration.defaultConfiguration = config
             
-            try! realm = Realm(configuration: config)
+            realm = try! Realm(configuration: config)
             
             LOG.debug("REALM FILE: \(Realm.Configuration.defaultConfiguration.fileURL)")
         }
     }
+    
+    func testData() {
+        let filePath = Bundle.main.path(forResource: "test-cites", ofType: "ris")
+        
+        let testData = RISFileParser.readFile(filePath!)
+        
+        
+        for (key,value) in testData.enumerated() {
+            LOG.debug("\(key) = \(value)")
+        }
+        
+        if let realm = realm {
+            try! realm.write {
+                let paperSession = PaperSession()
+                paperSession.title = "Some Title"
+                realm.add(paperSession, update: true)
+            }
+        }
+        
+        
+        //LOG.debug(testData)
+        //self.dataController?.saveResults("TESTER", results: items)
+    }
+    
     
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

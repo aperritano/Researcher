@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70A99CB91E097BD000061025 /* PaperSessionUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A99CB81E097BD000061025 /* PaperSessionUITableViewController.swift */; };
+		70A99CBB1E09B87A00061025 /* AppToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A99CBA1E09B87A00061025 /* AppToolbarController.swift */; };
+		70A99CBD1E09B90F00061025 /* AppPageTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A99CBC1E09B90F00061025 /* AppPageTabBarController.swift */; };
+		70CF5D551E0A10D30018027B /* PaperSessionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CF5D541E0A10D30018027B /* PaperSessionTableCell.swift */; };
 		70EDF2EE1E070DAD000D4F0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EDF2ED1E070DAD000D4F0D /* AppDelegate.swift */; };
 		70EDF2F31E070DAD000D4F0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70EDF2F11E070DAD000D4F0D /* Main.storyboard */; };
 		70EDF2F51E070DAD000D4F0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70EDF2F41E070DAD000D4F0D /* Assets.xcassets */; };
@@ -14,16 +18,22 @@
 		70EDF3171E077961000D4F0D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EDF3141E077961000D4F0D /* RootViewController.swift */; };
 		70EDF3181E077961000D4F0D /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EDF3151E077961000D4F0D /* AppNavigationController.swift */; };
 		70EDF3191E077961000D4F0D /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EDF3161E077961000D4F0D /* NextViewController.swift */; };
-		70EDF31C1E083326000D4F0D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EDF31B1E083326000D4F0D /* Model.swift */; };
+		70EDF31C1E083326000D4F0D /* ObjectModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EDF31B1E083326000D4F0D /* ObjectModels.swift */; };
 		70EDF31F1E08343B000D4F0D /* RISFileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EDF31E1E08343B000D4F0D /* RISFileParser.swift */; };
 		70EDF3211E08344E000D4F0D /* SwiftHTMLDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EDF3201E08344E000D4F0D /* SwiftHTMLDecode.swift */; };
 		70EDF3241E083B74000D4F0D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EDF3231E083B74000D4F0D /* Extension.swift */; };
 		70EDF3261E084365000D4F0D /* PaperX.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 70EDF3251E084365000D4F0D /* PaperX.xcdatamodel */; };
+		70EDF3291E0892FA000D4F0D /* test-cites.ris in Resources */ = {isa = PBXBuildFile; fileRef = 70EDF3281E0892FA000D4F0D /* test-cites.ris */; };
+		70EDF32B1E08DEF5000D4F0D /* AppMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EDF32A1E08DEF5000D4F0D /* AppMenuController.swift */; };
 		8D10FADE297A8035B01EE979 /* Pods_Researcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3957FC65C3762C95F48A38D8 /* Pods_Researcher.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3957FC65C3762C95F48A38D8 /* Pods_Researcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Researcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70A99CB81E097BD000061025 /* PaperSessionUITableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperSessionUITableViewController.swift; sourceTree = "<group>"; };
+		70A99CBA1E09B87A00061025 /* AppToolbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppToolbarController.swift; sourceTree = "<group>"; };
+		70A99CBC1E09B90F00061025 /* AppPageTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppPageTabBarController.swift; sourceTree = "<group>"; };
+		70CF5D541E0A10D30018027B /* PaperSessionTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperSessionTableCell.swift; sourceTree = "<group>"; };
 		70EDF2EA1E070DAD000D4F0D /* Researcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Researcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70EDF2ED1E070DAD000D4F0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70EDF2F21E070DAD000D4F0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -33,11 +43,13 @@
 		70EDF3141E077961000D4F0D /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		70EDF3151E077961000D4F0D /* AppNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
 		70EDF3161E077961000D4F0D /* NextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
-		70EDF31B1E083326000D4F0D /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Realm/Model.swift; sourceTree = "<group>"; };
+		70EDF31B1E083326000D4F0D /* ObjectModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObjectModels.swift; path = Realm/ObjectModels.swift; sourceTree = "<group>"; };
 		70EDF31E1E08343B000D4F0D /* RISFileParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RISFileParser.swift; sourceTree = "<group>"; };
 		70EDF3201E08344E000D4F0D /* SwiftHTMLDecode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHTMLDecode.swift; sourceTree = "<group>"; };
 		70EDF3231E083B74000D4F0D /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = Extension/Extension.swift; sourceTree = "<group>"; };
 		70EDF3251E084365000D4F0D /* PaperX.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PaperX.xcdatamodel; sourceTree = "<group>"; };
+		70EDF3281E0892FA000D4F0D /* test-cites.ris */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "test-cites.ris"; path = "Support/test-cites.ris"; sourceTree = "<group>"; };
+		70EDF32A1E08DEF5000D4F0D /* AppMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMenuController.swift; sourceTree = "<group>"; };
 		A911069B6DE6A07E36754915 /* Pods-Researcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Researcher.release.xcconfig"; path = "Pods/Target Support Files/Pods-Researcher/Pods-Researcher.release.xcconfig"; sourceTree = "<group>"; };
 		E9F9EB70B9D040CAB8AABA37 /* Pods-Researcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Researcher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Researcher/Pods-Researcher.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +75,27 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		70CF5D521E09C4100018027B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				70EDF2ED1E070DAD000D4F0D /* AppDelegate.swift */,
+				70EDF32A1E08DEF5000D4F0D /* AppMenuController.swift */,
+				70EDF3151E077961000D4F0D /* AppNavigationController.swift */,
+				70A99CBA1E09B87A00061025 /* AppToolbarController.swift */,
+				70A99CBC1E09B90F00061025 /* AppPageTabBarController.swift */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		70CF5D531E09C4170018027B /* PaperSession */ = {
+			isa = PBXGroup;
+			children = (
+				70CF5D541E0A10D30018027B /* PaperSessionTableCell.swift */,
+				70A99CB81E097BD000061025 /* PaperSessionUITableViewController.swift */,
+			);
+			name = PaperSession;
+			sourceTree = "<group>";
+		};
 		70EDF2E11E070DAD000D4F0D = {
 			isa = PBXGroup;
 			children = (
@@ -84,11 +117,12 @@
 		70EDF2EC1E070DAD000D4F0D /* Researcher */ = {
 			isa = PBXGroup;
 			children = (
+				70CF5D531E09C4170018027B /* PaperSession */,
+				70EDF3271E0892D1000D4F0D /* Support */,
 				70EDF3221E083B4E000D4F0D /* Extension */,
 				70EDF31D1E08342A000D4F0D /* DB */,
-				70EDF2ED1E070DAD000D4F0D /* AppDelegate.swift */,
+				70CF5D521E09C4100018027B /* App */,
 				70EDF3141E077961000D4F0D /* RootViewController.swift */,
-				70EDF3151E077961000D4F0D /* AppNavigationController.swift */,
 				70EDF3161E077961000D4F0D /* NextViewController.swift */,
 				70EDF2F11E070DAD000D4F0D /* Main.storyboard */,
 				70EDF2F41E070DAD000D4F0D /* Assets.xcassets */,
@@ -102,7 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				70EDF3251E084365000D4F0D /* PaperX.xcdatamodel */,
-				70EDF31B1E083326000D4F0D /* Model.swift */,
+				70EDF31B1E083326000D4F0D /* ObjectModels.swift */,
 				70EDF3201E08344E000D4F0D /* SwiftHTMLDecode.swift */,
 				70EDF31E1E08343B000D4F0D /* RISFileParser.swift */,
 			);
@@ -115,6 +149,14 @@
 				70EDF3231E083B74000D4F0D /* Extension.swift */,
 			);
 			name = Extension;
+			sourceTree = "<group>";
+		};
+		70EDF3271E0892D1000D4F0D /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				70EDF3281E0892FA000D4F0D /* test-cites.ris */,
+			);
+			name = Support;
 			sourceTree = "<group>";
 		};
 		E39C7A4C6CEBFE4C2AD7F865 /* Frameworks */ = {
@@ -191,6 +233,7 @@
 				70EDF2F81E070DAD000D4F0D /* LaunchScreen.storyboard in Resources */,
 				70EDF2F51E070DAD000D4F0D /* Assets.xcassets in Resources */,
 				70EDF2F31E070DAD000D4F0D /* Main.storyboard in Resources */,
+				70EDF3291E0892FA000D4F0D /* test-cites.ris in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,9 +292,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70EDF32B1E08DEF5000D4F0D /* AppMenuController.swift in Sources */,
+				70A99CBB1E09B87A00061025 /* AppToolbarController.swift in Sources */,
+				70CF5D551E0A10D30018027B /* PaperSessionTableCell.swift in Sources */,
+				70A99CB91E097BD000061025 /* PaperSessionUITableViewController.swift in Sources */,
 				70EDF3261E084365000D4F0D /* PaperX.xcdatamodel in Sources */,
 				70EDF3211E08344E000D4F0D /* SwiftHTMLDecode.swift in Sources */,
-				70EDF31C1E083326000D4F0D /* Model.swift in Sources */,
+				70EDF31C1E083326000D4F0D /* ObjectModels.swift in Sources */,
+				70A99CBD1E09B90F00061025 /* AppPageTabBarController.swift in Sources */,
 				70EDF31F1E08343B000D4F0D /* RISFileParser.swift in Sources */,
 				70EDF3191E077961000D4F0D /* NextViewController.swift in Sources */,
 				70EDF3181E077961000D4F0D /* AppNavigationController.swift in Sources */,

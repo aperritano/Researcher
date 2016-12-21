@@ -9,6 +9,8 @@ target 'Researcher' do
   pod 'RealmSwift'
   pod 'Material'
   pod 'XCGLogger'
+  pod 'SwifterSwift'
+
 end
 
 post_install do |installer|

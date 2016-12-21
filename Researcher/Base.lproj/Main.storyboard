@@ -6,26 +6,158 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
-        <scene sceneID="KJI-6P-ON2">
+        <!--Paper SessionUI Table View Controller-->
+        <scene sceneID="Bxr-yh-NJX">
             <objects>
-                <viewController storyboardIdentifier="rootViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MN1-bC-RRA" customClass="RootViewController" customModule="Researcher" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="w5A-mv-93g"/>
-                        <viewControllerLayoutGuide type="bottom" id="HMn-3F-Z6Q"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="FML-7c-GRy">
+                <tableViewController storyboardIdentifier="paperSessionUITableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cvZ-DC-jgL" customClass="PaperSessionUITableViewController" customModule="Researcher" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="142" sectionHeaderHeight="28" sectionFooterHeight="28" id="qV8-ub-l8I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DbZ-X7-nhx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="paperSessionCell" rowHeight="142" id="Lq0-Jl-tGC" customClass="PaperSessionTableCell" customModule="Researcher" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="142"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lq0-Jl-tGC" id="zHt-Og-JQ8">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="141.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="o5m-8e-qBs">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="141"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9de-8W-pkQ" userLabel="ContentView">
+                                                    <rect key="frame" x="2" y="1" width="371" height="85"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ce8-Pc-Y5b">
+                                                            <rect key="frame" x="0.0" y="0.0" width="371" height="85"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Upo-1Q-B89">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="185.5" height="85"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHI" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IB1-f3-8OW">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="185.5" height="85"/>
+                                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="IB1-f3-8OW" firstAttribute="centerY" secondItem="Upo-1Q-B89" secondAttribute="centerY" id="DxG-MR-cmT"/>
+                                                                        <constraint firstItem="IB1-f3-8OW" firstAttribute="centerX" secondItem="Upo-1Q-B89" secondAttribute="centerX" id="Paf-L3-30Z"/>
+                                                                        <constraint firstItem="IB1-f3-8OW" firstAttribute="width" secondItem="Upo-1Q-B89" secondAttribute="width" id="U5a-HA-LeF"/>
+                                                                        <constraint firstItem="IB1-f3-8OW" firstAttribute="height" secondItem="Upo-1Q-B89" secondAttribute="height" id="hcC-Vb-8Ov"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="IB1-f3-8OW" secondAttribute="trailing" id="vOG-wk-JYf"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIk-uD-YKf">
+                                                                    <rect key="frame" x="185.5" y="0.0" width="185.5" height="85"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Ce8-Pc-Y5b" firstAttribute="width" secondItem="9de-8W-pkQ" secondAttribute="width" id="10Y-Rl-1bF"/>
+                                                        <constraint firstItem="Ce8-Pc-Y5b" firstAttribute="centerY" secondItem="9de-8W-pkQ" secondAttribute="centerY" id="ZjG-4F-0ji"/>
+                                                        <constraint firstItem="Ce8-Pc-Y5b" firstAttribute="height" secondItem="9de-8W-pkQ" secondAttribute="height" id="bbL-HC-kOC"/>
+                                                        <constraint firstItem="Ce8-Pc-Y5b" firstAttribute="centerX" secondItem="9de-8W-pkQ" secondAttribute="centerX" id="e2D-HR-lUG"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJO-H1-fZp" userLabel="ToolbarView">
+                                                    <rect key="frame" x="2" y="87" width="371" height="53"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="fcw-nF-BSQ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="371" height="53"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7q-gu-rll" customClass="FabButton" customModule="Material">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="45" height="53"/>
+                                                                    <state key="normal" title="export"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="0.0"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                            <real key="value" value="0.0"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                            <real key="value" value="0.0"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                            <real key="value" value="0.0"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="updated: 12/14/16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbi-TB-vzF">
+                                                                    <rect key="frame" x="135" y="0.0" width="109" height="53"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCK-8v-eQ7" customClass="FabButton" customModule="Material">
+                                                                    <rect key="frame" x="341" y="0.0" width="30" height="53"/>
+                                                                    <state key="normal" title="fav"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                            <real key="value" value="0.0"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="0.0"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                            <real key="value" value="0.0"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                            <real key="value" value="0.0"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="fcw-nF-BSQ" firstAttribute="centerY" secondItem="RJO-H1-fZp" secondAttribute="centerY" id="8FF-Q9-AFI"/>
+                                                        <constraint firstItem="fcw-nF-BSQ" firstAttribute="height" secondItem="RJO-H1-fZp" secondAttribute="height" id="Wd2-iv-gIp"/>
+                                                        <constraint firstItem="fcw-nF-BSQ" firstAttribute="centerX" secondItem="RJO-H1-fZp" secondAttribute="centerX" id="mna-Lf-bUc"/>
+                                                        <constraint firstItem="fcw-nF-BSQ" firstAttribute="width" secondItem="RJO-H1-fZp" secondAttribute="width" id="qUr-1M-Dp7"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <edgeInsets key="layoutMargins" top="1" left="2" bottom="1" right="2"/>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="o5m-8e-qBs" firstAttribute="height" secondItem="zHt-Og-JQ8" secondAttribute="height" id="5vj-bx-JD5"/>
+                                        <constraint firstItem="o5m-8e-qBs" firstAttribute="centerY" secondItem="zHt-Og-JQ8" secondAttribute="centerY" id="D3S-Mg-ujS"/>
+                                        <constraint firstItem="o5m-8e-qBs" firstAttribute="centerX" secondItem="zHt-Og-JQ8" secondAttribute="centerX" id="D4C-op-lzz"/>
+                                        <constraint firstItem="9de-8W-pkQ" firstAttribute="height" secondItem="zHt-Og-JQ8" secondAttribute="height" multiplier="0.6" id="NhW-Vm-1nQ"/>
+                                        <constraint firstItem="o5m-8e-qBs" firstAttribute="width" secondItem="zHt-Og-JQ8" secondAttribute="width" id="wGu-Hb-s8E"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="favButton" destination="kCK-8v-eQ7" id="zC0-eY-5dZ"/>
+                                    <outlet property="shareButton" destination="U7q-gu-rll" id="hh8-5r-1Qz"/>
+                                    <outlet property="timestampLabel" destination="gbi-TB-vzF" id="eNO-ge-pIa"/>
+                                    <outlet property="titleLabel" destination="IB1-f3-8OW" id="7cw-UA-cHF"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cvZ-DC-jgL" id="KSJ-Z9-GrI"/>
+                            <outlet property="delegate" destination="cvZ-DC-jgL" id="5B5-xJ-XIu"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VRp-e8-6Ns" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="371" y="132"/>
+            <point key="canvasLocation" x="-127.2" y="77.811094452773617"/>
         </scene>
     </scenes>
 </document>
