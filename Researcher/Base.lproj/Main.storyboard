@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Paper SessionUI Table View Controller-->
+        <!--Paper CollectionUI Table View Controller-->
         <scene sceneID="Bxr-yh-NJX">
             <objects>
-                <tableViewController storyboardIdentifier="paperSessionUITableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cvZ-DC-jgL" customClass="PaperSessionUITableViewController" customModule="Researcher" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="paperCollectionUITableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cvZ-DC-jgL" customClass="PaperCollectionUITableViewController" customModule="Researcher" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="142" sectionHeaderHeight="28" sectionFooterHeight="28" id="qV8-ub-l8I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -200,7 +200,6 @@
                                     <outlet property="shareButton" destination="U7q-gu-rll" id="hh8-5r-1Qz"/>
                                     <outlet property="timestampLabel" destination="gbi-TB-vzF" id="eNO-ge-pIa"/>
                                     <outlet property="titleLabel" destination="IB1-f3-8OW" id="7cw-UA-cHF"/>
-                                    <segue destination="zlo-Og-kGr" kind="show" id="RX2-15-Quj"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -214,10 +213,10 @@
             </objects>
             <point key="canvasLocation" x="263" y="-99"/>
         </scene>
-        <!--View Controller-->
+        <!--Next View Controller-->
         <scene sceneID="yOE-gG-a3t">
             <objects>
-                <viewController id="zlo-Og-kGr" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="nextViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zlo-Og-kGr" customClass="NextViewController" customModule="Researcher" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gz9-I2-e9h"/>
                         <viewControllerLayoutGuide type="bottom" id="11q-pg-1ko"/>
@@ -230,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvQ-6i-ivK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1105" y="-68"/>
+            <point key="canvasLocation" x="1127" y="-99"/>
         </scene>
     </scenes>
     <resources>

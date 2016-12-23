@@ -98,6 +98,8 @@ extension RootViewController {
     
     fileprivate func prepareNavigationItem() {
         navigationItem.title = "Researcher"
+        navigationItem.titleLabel.tintColor = .white
+        navigationItem.detailLabel.tintColor = .white
         //navigationItem.detail = "Optimize your Literature Review"
         
         //navigationItem.leftViews = [menuButton]
@@ -124,7 +126,7 @@ extension RootViewController {
 extension RootViewController {
     @objc
     fileprivate func handleNextButton() {
-        navigationController?.pushViewController(NextViewController(), animated: true)
+       // navigationController?.pushViewController(NextViewController(), animated: true)
     }
 }
 

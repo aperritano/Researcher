@@ -25,35 +25,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setDefaultRealm()
         
         
-        self.testData()
+        //self.testData()
         
         window = UIWindow(frame:UIScreen.main.bounds)
         
-//        let pageTabBarController = AppPageTabBarController(viewControllers: viewControllers, selectedIndex: 0)
-  
-  
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let rootViewController = storyboard.instantiateViewController(withIdentifier: "paperSessionUITableViewController") as! PaperSessionUITableViewController
-        
-        
+        let rootViewController = storyboard.instantiateViewController(withIdentifier: "paperCollectionUITableViewController") as! PaperCollectionUITableViewController
         
         let menuController = AppMenuController(rootViewController: rootViewController)
         
-    
-
         let app = AppNavigationController(rootViewController: menuController)
         
         let statusBar = AppStatusBarController(rootViewController: app)
         let snackBar = AppSnackbarController(rootViewController: statusBar)
-
         
         window!.rootViewController = snackBar
         window!.makeKeyAndVisible()
-        
-//        UIApplication.shared.statusBarStyle = .default
-        
         return true
     }
     
@@ -119,17 +107,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let filePath = Bundle.main.path(forResource: "test-cites", ofType: "ris")
         
         let testData = RISFileParser.readFile(filePath!)
-        
-        
+                
         for (key,value) in testData.enumerated() {
             LOG.debug("\(key) = \(value)")
         }
         
         if let realm = realm {
             try! realm.write {
-                let paperSession = PaperSession()
-                paperSession.title = "Some Title"
-                realm.add(paperSession, update: true)
+                let paperCollection = PaperCollection()
+                paperCollection.title = "CHI"
+                
+                for index in 0...5 {
+                    let paperSession = PaperSession()
+                    paperSession.title = "201\(index)"
+
+                    for paper in testData {
+                        let p = Paper()
+                        p.populateEndnote(paper)
+                        paperSession.papers.append(p)
+                    }
+                    paperCollection.paperSessions.append(paperSession)
+                }
+                realm.add(paperCollection)
             }
         }
         

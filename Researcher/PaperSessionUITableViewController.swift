@@ -84,6 +84,9 @@ extension PaperSessionUITableViewController {
         if let cell = tableView.cellForRow(at: indexPath) {
             cell.accessoryType = .checkmark
             if (self.paperSessionResults?[indexPath.row]) != nil {
+
+//                navigationController?.pushViewController(NextViewController(), animated: true)
+                
 //                self.experiment = experiment
 //                self.selectedExperimentIndex = indexPath.row
             }

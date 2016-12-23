@@ -6,7 +6,7 @@ class PaperCollection: Object {
     dynamic var last_modified = Date()
     dynamic var title = ""
     let isFav = RealmOptional<Bool>()
-    var papers = List<PaperSession>()
+    var paperSessions = List<PaperSession>()
     
     let labelsCount = RealmOptional<Int>()
     let likeCount = RealmOptional<Int>()
@@ -68,6 +68,36 @@ class Paper: Object {
     let isLiked = RealmOptional<Bool>()
     let isRead = RealmOptional<Bool>()
     let isFav = RealmOptional<Bool>()
+    
+    func populateEndnote( _ properties: [String:AnyObject]) {
+        //self.rawEntry = properties as NSObject?
+        self.entryType = (properties["TY"] as? String)!
+        self.abstract = (properties["AB"] as? String)!
+        self.acmid = (properties["UR"] as? String)!
+        
+        let t = (properties["A1"] as! [String])
+        self.authors = t.joined(separator: ",")
+        
+        self.title = (properties["T1"] as? String)!
+        self.inProceeding = (properties["T2"] as? String)!
+        self.published = (properties["PY"] as? String)!
+        
+        if let v = properties["VL"] {
+            self.volume = v as! String
+        }
+        
+        self.startPage = (properties["SP"] as? String)!
+        self.endPage = (properties["EP"] as? String)!
+        self.doi = (properties["UR"] as? String)!
+        self.databaseUrl = (properties["DP"] as? String)!
+        self.databasePublisher = (properties["DB"] as? String)!
+        
+        if let kw = properties["KW"] {
+            self.keywords = kw as! String
+        }
+        
+        //self.keywords = (properties["KW"] as? String)!
+    }
     
     override static func primaryKey() -> String? {
         return "id"

@@ -26,12 +26,9 @@ class PaperCollectionUITableViewController: UITableViewController {
     var paperCollectionNotification: NotificationToken? = nil
     var notificationTokens = [NotificationToken]()
     
-    
-    
     deinit {
         paperCollectionNotification?.stop()
     }
-    
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -92,15 +89,21 @@ extension PaperCollectionUITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let cell = tableView.cellForRow(at: indexPath) {
-            cell.accessoryType = .checkmark
-            if (self.paperCollectionResults?[indexPath.row]) != nil {
-                //                self.experiment = experiment
-                //                self.selectedExperimentIndex = indexPath.row
+        if let cell = tableView.cellForRow(at: indexPath), let paperCollection = self.paperCollectionResults?[indexPath.row] {
+            
+            var tabs = [AnyObject]()
+            
+            for paperSession in paperCollection.paperSessions {
+                let nextViewController = storyboard?.instantiateViewController(withIdentifier: "nextViewController") as! NextViewController
+                nextViewController.labelTitle = paperSession.title
+                tabs.append(nextViewController)
             }
             
+            
+            let pageTabBarController = AppPageTabBarController(viewControllers: tabs as! [UIViewController], selectedIndex: 0)
+            pageTabBarController.titleLabel = paperCollection.title.uppercased()            
+            navigationController?.pushViewController(pageTabBarController, animated: true)
         }
-        
     }
     
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
