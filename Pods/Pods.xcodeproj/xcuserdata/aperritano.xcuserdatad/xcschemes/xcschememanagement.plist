@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwifterSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>XCGLogger.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,37 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1578110D513B26B5BA22F04060E6DAFA</key>
+		<key>24085F438788A072884B3FA2E6E02D7C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4017B0B8815FF792314F1A877AAA2243</key>
+		<key>367E317BC931D2CEAF6293407D2544D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4A2F765C0008E6907A56FA900AB21F77</key>
+		<key>465BCB372ADD874ACBFD2950F5D75460</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>723D58A915B06963AD2989C7115C726A</key>
+		<key>53F795602623E76C1D2B488FCE54C0B9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B06F0297E42C46B577CB6B2404402DFE</key>
+		<key>BA287C1DC287EAA4A399B22703554187</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C10A3D56D9722EC76584E3911946028F</key>
+		<key>C87198AF21B5723AD377A68D21F1BFC7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DC9D2057AA86FCA520CA086D3EA6BEDF</key>
+		<key>CC09D02C262E8D967E0D3F545E4767DA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DDB43DA3676976AEA49BD2DBED26DD42</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -8,12 +8,32 @@ class PaperCollection: Object {
     let isFav = RealmOptional<Bool>()
     var paperSessions = List<PaperSession>()
     
-    let labelsCount = RealmOptional<Int>()
-    let likeCount = RealmOptional<Int>()
-
-    
     override static func primaryKey() -> String? {
         return "id"
+    }
+    
+    func totalLabels() -> Int {
+        return paperSessions.count
+    }
+    
+    func totalPapers() -> Int {
+        var count = 0
+        
+        for ps in paperSessions {
+            count += ps.paperCount()
+        }
+        return count
+    }
+    
+    func totalLikes() -> Int {
+        
+        var count = 0
+        
+        for ps in paperSessions {
+            count += ps.likes()
+        }
+        
+        return count
     }
 }
 
@@ -30,6 +50,26 @@ class PaperSession: Object {
 
     override static func primaryKey() -> String? {
         return "id"
+    }
+    
+    func paperCount() -> Int {
+        return papers.count
+    }
+    
+    func likes() -> Int {
+        if papers.isEmpty {
+            return 0
+        } else {
+            var count = 0
+            for p in papers {
+                if let liked = p.isLiked.value {
+                    if liked {
+                        count += 1
+                    }
+                }
+            }
+            return count
+        }
     }
 }
 

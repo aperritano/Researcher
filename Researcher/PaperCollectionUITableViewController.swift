@@ -115,8 +115,17 @@ extension PaperCollectionUITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:PaperSessionTableCell = self.tableView.dequeueReusableCell(withIdentifier: "paperSessionCell") as! PaperSessionTableCell
         
-        if let paperSession = self.paperCollectionResults?[indexPath.row] {
-            cell.titleLabel.text = paperSession.title.uppercased()
+        if let paperCollection = self.paperCollectionResults?[indexPath.row] {
+            
+            let dateFormatterGet = DateFormatter()
+            dateFormatterGet.dateFormat = "MMM d, yyyy h:mm a"
+            let formatted = dateFormatterGet.string(from: paperCollection.last_modified)
+            
+            cell.timestampLabel.text = formatted
+            cell.likesLabel.text = "\(paperCollection.totalLikes()) Likes"
+            cell.papersLabel.text = "\(paperCollection.totalLabels()) Labels : \(paperCollection.totalPapers()) Papers"
+
+            cell.titleLabel.text = paperCollection.title.uppercased()
         }
         return cell
     }

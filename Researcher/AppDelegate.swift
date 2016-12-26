@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setDefaultRealm()
         
         
-        //self.testData()
+//        self.testData()
         
         window = UIWindow(frame:UIScreen.main.bounds)
         

@@ -59,16 +59,18 @@
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Nfh-nz-WWa">
                                                                             <rect key="frame" x="0.0" y="0.0" width="186" height="85"/>
                                                                             <subviews>
-                                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZi-Je-G54">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Likes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTg-3q-ky3">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="186" height="42.5"/>
-                                                                                    <state key="normal" title="0" image="cm_add_white">
-                                                                                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                    </state>
-                                                                                </button>
-                                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pau-t3-UVP">
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                    <nil key="textColor"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Papers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TwT-Zf-gDN">
                                                                                     <rect key="frame" x="0.0" y="42.5" width="186" height="42.5"/>
-                                                                                    <state key="normal" title="5 Labels : 365 Papers"/>
-                                                                                </button>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                    <nil key="textColor"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
                                                                             </subviews>
                                                                         </stackView>
                                                                     </subviews>
@@ -129,9 +131,9 @@
                                                                         <constraint firstItem="U7q-gu-rll" firstAttribute="centerY" secondItem="KXR-nW-zOX" secondAttribute="centerY" id="SkS-Lf-2t4"/>
                                                                     </constraints>
                                                                 </view>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="updated: 12/14/16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbi-TB-vzF">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="updated: 12/14/16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gbi-TB-vzF">
                                                                     <rect key="frame" x="123.5" y="0.0" width="124" height="53"/>
-                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -197,6 +199,8 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="favButton" destination="kCK-8v-eQ7" id="zC0-eY-5dZ"/>
+                                    <outlet property="likesLabel" destination="JTg-3q-ky3" id="AHv-iZ-fDF"/>
+                                    <outlet property="papersLabel" destination="TwT-Zf-gDN" id="MGh-cE-vZH"/>
                                     <outlet property="shareButton" destination="U7q-gu-rll" id="hh8-5r-1Qz"/>
                                     <outlet property="timestampLabel" destination="gbi-TB-vzF" id="eNO-ge-pIa"/>
                                     <outlet property="titleLabel" destination="IB1-f3-8OW" id="7cw-UA-cHF"/>
@@ -232,7 +236,4 @@
             <point key="canvasLocation" x="1127" y="-99"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="cm_add_white" width="24" height="24"/>
-    </resources>
 </document>

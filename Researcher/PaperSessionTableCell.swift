@@ -17,6 +17,10 @@ class PaperSessionTableCell: UITableViewCell {
     @IBOutlet weak var favButton: FabButton!
     @IBOutlet weak var titleLabel: UILabel!
     
+    @IBOutlet weak var likesLabel: UILabel!
+    
+    @IBOutlet weak var papersLabel: UILabel!
+    
     static let reuseIdentifier = "paperSessionCell"
     
     required init?(coder aDecoder: NSCoder) {
