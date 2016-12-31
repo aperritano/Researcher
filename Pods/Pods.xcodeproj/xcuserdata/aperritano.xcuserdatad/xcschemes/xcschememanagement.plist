@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Koloda.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Material-io.cosmicmind.material.fonts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -44,9 +49,29 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>pop.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>1AC89C5063D3710395A0603AB0CA2B38</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1C141636CDDE587096FC0C60EF57841E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>20151774CE2F5FA6B8126D4F5ED1C5FE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>24085F438788A072884B3FA2E6E02D7C</key>
 		<dict>
 			<key>primary</key>
@@ -57,32 +82,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>465BCB372ADD874ACBFD2950F5D75460</key>
+		<key>4AEE630DABA7DF1B8E6FA551B7E8338F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>53F795602623E76C1D2B488FCE54C0B9</key>
+		<key>6A3C19896974C728764A9FFCE44BC3DD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7DBE34BB60F3C8BA03232F5946A303F5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9BDD0E42347ED8EDEA19928B85B79254</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>BA287C1DC287EAA4A399B22703554187</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C87198AF21B5723AD377A68D21F1BFC7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CC09D02C262E8D967E0D3F545E4767DA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DDB43DA3676976AEA49BD2DBED26DD42</key>
 		<dict>
 			<key>primary</key>
 			<true/>

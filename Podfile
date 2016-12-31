@@ -10,7 +10,7 @@ target 'Researcher' do
   pod 'Material'
   pod 'XCGLogger'
   pod 'SwifterSwift'
-
+  pod 'Koloda'
 end
 
 post_install do |installer|

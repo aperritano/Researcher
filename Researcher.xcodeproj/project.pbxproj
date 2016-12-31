@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7094C0E81E1211AB00749582 /* BackgroundKolodaAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7094C0E71E1211AB00749582 /* BackgroundKolodaAnimator.swift */; };
+		7094C0EA1E1211F200749582 /* BackgroundAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7094C0E91E1211F200749582 /* BackgroundAnimationViewController.swift */; };
+		7094C0EE1E12121200749582 /* CustomKolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7094C0EB1E12121200749582 /* CustomKolodaView.swift */; };
+		7094C0EF1E12121200749582 /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7094C0EC1E12121200749582 /* CustomOverlayView.swift */; };
+		7094C0F41E12189300749582 /* SwipeOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7094C0F31E12189300749582 /* SwipeOverlayView.swift */; };
 		70A99CB91E097BD000061025 /* PaperSessionUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A99CB81E097BD000061025 /* PaperSessionUITableViewController.swift */; };
 		70A99CBB1E09B87A00061025 /* AppToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A99CBA1E09B87A00061025 /* AppToolbarController.swift */; };
 		70A99CBD1E09B90F00061025 /* AppPageTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A99CBC1E09B90F00061025 /* AppPageTabBarController.swift */; };
+		70AB7CA51E1582E8001313F8 /* BasicCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70AB7CA41E1582E8001313F8 /* BasicCardView.xib */; };
+		70AB7CA71E158364001313F8 /* BasicCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB7CA61E158364001313F8 /* BasicCardView.swift */; };
+		70AB7CA91E1590E3001313F8 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70AB7CA81E1590E3001313F8 /* OverlayView.xib */; };
 		70C3EC141E0AC6B5008368A8 /* PaperCollectionUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C3EC131E0AC6B5008368A8 /* PaperCollectionUITableViewController.swift */; };
 		70C3EC161E0ACCFB008368A8 /* AppSnackbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C3EC151E0ACCFB008368A8 /* AppSnackbarController.swift */; };
 		70C3EC181E0ACD6D008368A8 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C3EC171E0ACD6D008368A8 /* StatusBarController.swift */; };
@@ -33,9 +41,17 @@
 
 /* Begin PBXFileReference section */
 		3957FC65C3762C95F48A38D8 /* Pods_Researcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Researcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7094C0E71E1211AB00749582 /* BackgroundKolodaAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundKolodaAnimator.swift; sourceTree = "<group>"; };
+		7094C0E91E1211F200749582 /* BackgroundAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundAnimationViewController.swift; sourceTree = "<group>"; };
+		7094C0EB1E12121200749582 /* CustomKolodaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomKolodaView.swift; sourceTree = "<group>"; };
+		7094C0EC1E12121200749582 /* CustomOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
+		7094C0F31E12189300749582 /* SwipeOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeOverlayView.swift; sourceTree = "<group>"; };
 		70A99CB81E097BD000061025 /* PaperSessionUITableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperSessionUITableViewController.swift; sourceTree = "<group>"; };
 		70A99CBA1E09B87A00061025 /* AppToolbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppToolbarController.swift; sourceTree = "<group>"; };
 		70A99CBC1E09B90F00061025 /* AppPageTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppPageTabBarController.swift; sourceTree = "<group>"; };
+		70AB7CA41E1582E8001313F8 /* BasicCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BasicCardView.xib; sourceTree = "<group>"; };
+		70AB7CA61E158364001313F8 /* BasicCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCardView.swift; sourceTree = "<group>"; };
+		70AB7CA81E1590E3001313F8 /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
 		70C3EC131E0AC6B5008368A8 /* PaperCollectionUITableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperCollectionUITableViewController.swift; sourceTree = "<group>"; };
 		70C3EC151E0ACCFB008368A8 /* AppSnackbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSnackbarController.swift; sourceTree = "<group>"; };
 		70C3EC171E0ACD6D008368A8 /* StatusBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
@@ -79,6 +95,21 @@
 				A911069B6DE6A07E36754915 /* Pods-Researcher.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		7094C0E61E12119E00749582 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				7094C0F31E12189300749582 /* SwipeOverlayView.swift */,
+				70AB7CA81E1590E3001313F8 /* OverlayView.xib */,
+				70AB7CA41E1582E8001313F8 /* BasicCardView.xib */,
+				70AB7CA61E158364001313F8 /* BasicCardView.swift */,
+				7094C0EB1E12121200749582 /* CustomKolodaView.swift */,
+				7094C0EC1E12121200749582 /* CustomOverlayView.swift */,
+				7094C0E71E1211AB00749582 /* BackgroundKolodaAnimator.swift */,
+				7094C0E91E1211F200749582 /* BackgroundAnimationViewController.swift */,
+			);
+			name = CardView;
 			sourceTree = "<group>";
 		};
 		70CF5D521E09C4100018027B /* App */ = {
@@ -126,6 +157,7 @@
 		70EDF2EC1E070DAD000D4F0D /* Researcher */ = {
 			isa = PBXGroup;
 			children = (
+				7094C0E61E12119E00749582 /* CardView */,
 				70CF5D531E09C4170018027B /* PaperSession */,
 				70EDF3271E0892D1000D4F0D /* Support */,
 				70EDF3221E083B4E000D4F0D /* Extension */,
@@ -241,7 +273,9 @@
 			files = (
 				70EDF2F81E070DAD000D4F0D /* LaunchScreen.storyboard in Resources */,
 				70EDF2F51E070DAD000D4F0D /* Assets.xcassets in Resources */,
+				70AB7CA51E1582E8001313F8 /* BasicCardView.xib in Resources */,
 				70EDF2F31E070DAD000D4F0D /* Main.storyboard in Resources */,
+				70AB7CA91E1590E3001313F8 /* OverlayView.xib in Resources */,
 				70EDF3291E0892FA000D4F0D /* test-cites.ris in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,7 +335,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7094C0E81E1211AB00749582 /* BackgroundKolodaAnimator.swift in Sources */,
 				70C3EC161E0ACCFB008368A8 /* AppSnackbarController.swift in Sources */,
+				7094C0EF1E12121200749582 /* CustomOverlayView.swift in Sources */,
+				7094C0EA1E1211F200749582 /* BackgroundAnimationViewController.swift in Sources */,
 				70EDF32B1E08DEF5000D4F0D /* AppMenuController.swift in Sources */,
 				70A99CBB1E09B87A00061025 /* AppToolbarController.swift in Sources */,
 				70CF5D551E0A10D30018027B /* PaperSessionTableCell.swift in Sources */,
@@ -312,10 +349,13 @@
 				70EDF31C1E083326000D4F0D /* ObjectModels.swift in Sources */,
 				70A99CBD1E09B90F00061025 /* AppPageTabBarController.swift in Sources */,
 				70EDF31F1E08343B000D4F0D /* RISFileParser.swift in Sources */,
+				7094C0F41E12189300749582 /* SwipeOverlayView.swift in Sources */,
+				7094C0EE1E12121200749582 /* CustomKolodaView.swift in Sources */,
 				70EDF3191E077961000D4F0D /* NextViewController.swift in Sources */,
 				70EDF3181E077961000D4F0D /* AppNavigationController.swift in Sources */,
 				70EDF2EE1E070DAD000D4F0D /* AppDelegate.swift in Sources */,
 				70C3EC181E0ACD6D008368A8 /* StatusBarController.swift in Sources */,
+				70AB7CA71E158364001313F8 /* BasicCardView.swift in Sources */,
 				70EDF3171E077961000D4F0D /* RootViewController.swift in Sources */,
 				70EDF3241E083B74000D4F0D /* Extension.swift in Sources */,
 			);

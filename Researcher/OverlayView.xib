@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D17a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SwipeOverlayView" customModule="Researcher" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0t-Bs-jbO" userLabel="backgroundView">
+                    <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_favorite_48pt" translatesAutoresizingMaskIntoConstraints="NO" id="tbf-Bk-lQO">
+                            <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="NbS-pY-VXU"/>
+                                <constraint firstAttribute="width" secondItem="tbf-Bk-lQO" secondAttribute="height" multiplier="1:1" id="tAa-Oo-Qgh"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="tbf-Bk-lQO" firstAttribute="centerY" secondItem="S0t-Bs-jbO" secondAttribute="centerY" id="9NC-3h-J7P"/>
+                        <constraint firstItem="tbf-Bk-lQO" firstAttribute="centerX" secondItem="S0t-Bs-jbO" secondAttribute="centerX" id="GMz-pO-zrC"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.63529411759999999" green="0.70196078429999997" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="S0t-Bs-jbO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="LPB-S7-J67"/>
+                <constraint firstItem="S0t-Bs-jbO" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="is0-xV-4d1"/>
+                <constraint firstItem="S0t-Bs-jbO" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ovU-I4-Ogn"/>
+                <constraint firstItem="S0t-Bs-jbO" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="uo5-eS-cUs"/>
+            </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                    <real key="value" value="1"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                    <color key="value" red="0.13725490200000001" green="0.1529411765" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="backgroundView" destination="S0t-Bs-jbO" id="g3K-hA-NVR"/>
+                <outlet property="swipeImageView" destination="tbf-Bk-lQO" id="gKg-UH-92c"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_favorite_48pt" width="48" height="48"/>
+    </resources>
+</document>

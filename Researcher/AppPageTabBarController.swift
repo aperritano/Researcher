@@ -51,6 +51,9 @@ class AppPageTabBarController: PageTabBarController {
 
 extension AppPageTabBarController: PageTabBarControllerDelegate {
     func pageTabBarController(pageTabBarController: PageTabBarController, didTransitionTo viewController: UIViewController) {
+        
+        viewController.view.setNeedsLayout()
+        viewController.view.setNeedsDisplay()
         print("pageTabBarController", pageTabBarController, "didTransitionTo viewController:", viewController)
     }
 }
