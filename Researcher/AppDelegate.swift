@@ -22,10 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        setDefaultRealm()
-        
-        
-//        self.testData()
+        setDefaultRealm()    
+        //self.testData()
         
         window = UIWindow(frame:UIScreen.main.bounds)
         
@@ -117,17 +115,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let paperCollection = PaperCollection()
                 paperCollection.title = "CHI"
                 
-                for index in 0...5 {
                     let paperSession = PaperSession()
-                    paperSession.title = "201\(index)"
+                    paperSession.title = "2014"
 
-                    for paper in testData {
+                    for (index, paper) in testData.enumerated() {
                         let p = Paper()
+                        p.index.value = index
                         p.populateEndnote(paper)
                         paperSession.papers.append(p)
                     }
                     paperCollection.paperSessions.append(paperSession)
-                }
+            
                 realm.add(paperCollection)
             }
         }

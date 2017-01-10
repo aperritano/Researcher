@@ -1,36 +1,47 @@
 PODS:
+  - Charts (3.0.1):
+    - Charts/Core (= 3.0.1)
+  - Charts/Core (3.0.1)
   - Koloda (4.0):
     - pop (~> 1.0)
-  - Material (2.4.4):
-    - Material/Core (= 2.4.4)
-  - Material/Core (2.4.4)
+  - Material (2.4.6):
+    - Material/Core (= 2.4.6)
+  - Material/Core (2.4.6)
   - pop (1.0.9)
+  - PopupDialog (0.5.3)
   - Realm (2.1.2):
     - Realm/Headers (= 2.1.2)
   - Realm/Headers (2.1.2)
   - RealmSwift (2.1.2):
     - Realm (= 2.1.2)
-  - SwifterSwift (1.4)
+  - SwiftCharts (0.5.1)
+  - SwifterSwift (1.4.3)
   - XCGLogger (4.0.0):
     - XCGLogger/Core (= 4.0.0)
   - XCGLogger/Core (4.0.0)
 
 DEPENDENCIES:
+  - Charts
   - Koloda
   - Material
+  - PopupDialog
   - RealmSwift
+  - SwiftCharts
   - SwifterSwift
   - XCGLogger
 
 SPEC CHECKSUMS:
+  Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   Koloda: cb171633afc6182a77821b7951e38b2cb272ba7c
-  Material: 26f515d3291234716b47bb1b918746f254e80554
+  Material: 43bd91d61e86ae2b6d6574e28fcb1ed48ff813cb
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  PopupDialog: 533dd564f8781633375505b9fbd406f8f146ccc9
   Realm: efe855f4d977c8ce5a82d3116d9f1ff155a6550c
   RealmSwift: 17d6ee30b6f9df86364408c2197492e33bfea567
-  SwifterSwift: af5d959217ea9ea265ecf6a8e29142733a809268
+  SwiftCharts: d263289cdc7fc955fef54ae3bc6529f696e69933
+  SwifterSwift: 12bec12cda5820722de0698dd8f55bc031a1260a
   XCGLogger: 38063ea89b4c8b23232d18efd2e12eb0005f3ea4
 
-PODFILE CHECKSUM: 8f0b976716afa76350809375c7b1776b9856e763
+PODFILE CHECKSUM: 5a8601d3575a660aa7fb8ed2bf8154847cbf8da1
 
 COCOAPODS: 1.1.1

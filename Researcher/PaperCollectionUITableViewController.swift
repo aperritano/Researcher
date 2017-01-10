@@ -95,6 +95,7 @@ extension PaperCollectionUITableViewController {
             
             for paperSession in paperCollection.paperSessions {
                 let nextViewController = storyboard?.instantiateViewController(withIdentifier: "nextViewController") as! NextViewController
+                nextViewController.paperSession = paperSession
                 nextViewController.labelTitle = paperSession.title
                 tabs.append(nextViewController)
             }

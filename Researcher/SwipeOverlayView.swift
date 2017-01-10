@@ -9,8 +9,8 @@
 import UIKit
 import Koloda
 
-private let overlayRightImageName = "ic_favorite_48pt"
-private let overlayLeftImageName = "ic_close_48pt"
+private let overlayRightImageName = "ic_like_heart"
+private let overlayLeftImageName = "ic_dislike_close"
 
 class SwipeOverlayView: OverlayView {
     

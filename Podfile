@@ -11,6 +11,9 @@ target 'Researcher' do
   pod 'XCGLogger'
   pod 'SwifterSwift'
   pod 'Koloda'
+  pod 'SwiftCharts'
+  pod 'PopupDialog'
+  pod 'Charts'
 end
 
 post_install do |installer|

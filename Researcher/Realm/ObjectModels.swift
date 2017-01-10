@@ -44,8 +44,10 @@ class PaperSession: Object {
     dynamic var title = ""
     
     let likesCount = RealmOptional<Int>()
-    let favCount = RealmOptional<Int>()
-    let totalLikes = RealmOptional<Int>()
+    let dislikesCount = RealmOptional<Int>()
+    let lastPaperIndex = RealmOptional<Int>()
+    let isDone = RealmOptional<Bool>()
+    
     var papers = List<Paper>()
 
     override static func primaryKey() -> String? {
@@ -108,6 +110,7 @@ class Paper: Object {
     let isLiked = RealmOptional<Bool>()
     let isRead = RealmOptional<Bool>()
     let isFav = RealmOptional<Bool>()
+    let index = RealmOptional<Int>()
     
     func populateEndnote( _ properties: [String:AnyObject]) {
         //self.rawEntry = properties as NSObject?
@@ -116,7 +119,7 @@ class Paper: Object {
         self.acmid = (properties["UR"] as? String)!
         
         let t = (properties["A1"] as! [String])
-        self.authors = t.joined(separator: ",")
+        self.authors = t.joined(separator: "; ")
         
         self.title = (properties["T1"] as? String)!
         self.inProceeding = (properties["T2"] as? String)!

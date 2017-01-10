@@ -342,8 +342,8 @@ extension String {
                     result.append(decoded)
                     
                     // Record offset
-//                    let offset = (index: semiRange.upperBound, offset: 1 - <#T##Collection corresponding to `position`##Collection#>.distance(from: position, to: semiRange.upperBound))
-//                    replacementOffsets.append(offset)
+                    //                    let offset = (index: semiRange.upperBound, offset: 1 - <#T##Collection corresponding to `position`##Collection#>.distance(from: position, to: semiRange.upperBound))
+                    //                    replacementOffsets.append(offset)
                     
                 } else {
                     

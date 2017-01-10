@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D17a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RatingViewController" customModule="Researcher" customModuleProvider="target">
+            <connections>
+                <outlet property="placeholderView" destination="IS1-mO-qkH" id="s1Z-FT-atS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="550"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TvE-Nf-yGG">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="550"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Like vs. Dislikes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEy-07-EV1">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                            <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="d6P-rY-YyI"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IS1-mO-qkH">
+                            <rect key="frame" x="0.0" y="40" width="320" height="510"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="320" id="NJ8-Aa-mKB"/>
+                                <constraint firstAttribute="height" constant="510" id="vQN-LF-zKi"/>
+                            </constraints>
+                            <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="ZEy-07-EV1" firstAttribute="width" secondItem="TvE-Nf-yGG" secondAttribute="width" id="nwl-24-otY"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="TvE-Nf-yGG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9JD-y4-pz3"/>
+                <constraint firstItem="TvE-Nf-yGG" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="aSW-wn-peG"/>
+                <constraint firstItem="TvE-Nf-yGG" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="hNU-u6-xZ3"/>
+                <constraint firstItem="TvE-Nf-yGG" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="n83-GM-Lwb"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="75.5" y="-53.5"/>
+        </view>
+    </objects>
+</document>

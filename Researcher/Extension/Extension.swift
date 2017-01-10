@@ -31,6 +31,19 @@ let LOG: XCGLogger = {
     return LOG
 }()
 
+extension Array {
+    
+    // See Swiftz: https://github.com/typelift/Swiftz/blob/master/Swiftz/ArrayExt.swift#L214
+    /// Safely indexes into an array by converting out of bounds errors to nils.
+    public func safeIndex(i : Int) -> Element? {
+        if i < self.count && i >= 0 {
+            return self[i]
+        } else {
+            return nil
+        }
+    }
+}
+
 extension UIStoryboard {
     class func viewController(identifier: String) -> UIViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: identifier)

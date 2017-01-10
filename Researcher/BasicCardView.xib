@@ -14,7 +14,125 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BasicCardView" customModule="Researcher" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dNW-9v-2fo">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXf-Zo-doy">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="42.5"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33.5" id="onI-FT-6M7"/>
+                            </constraints>
+                            <attributedString key="attributedText">
+                                <fragment content="Paper Title">
+                                    <attributes>
+                                        <font key="NSFont" size="20" name="Roboto-Bold"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oCy-ol-Mzd">
+                            <rect key="frame" x="0.0" y="42.5" width="375" height="2"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="WZG-Z7-i7K"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAE-Sq-ION">
+                            <rect key="frame" x="0.0" y="44.5" width="375" height="33.5"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33.5" id="cqF-yw-e7r"/>
+                            </constraints>
+                            <attributedString key="attributedText">
+                                <fragment content="Authors">
+                                    <attributes>
+                                        <font key="NSFont" size="16" name="Roboto-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4UP-vd-v3c">
+                            <rect key="frame" x="0.0" y="78" width="375" height="2"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="eva-64-FjJ"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cyt-jj-f7U">
+                            <rect key="frame" x="0.0" y="80" width="375" height="2"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="XJx-Cm-RIs"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="RGj-Em-uFB" userLabel="OuterView">
+                            <rect key="frame" x="0.0" y="82" width="375" height="585"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i2Q-gR-Bfx" userLabel="InnerView">
+                                    <rect key="frame" x="4" y="4" width="367" height="577"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uYr-pZ-2Fj">
+                                    <rect key="frame" x="4" y="4" width="367" height="577"/>
+                                    <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <attributedString key="attributedText">
+                                        <fragment>
+                                            <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <attributes>
+                                                <font key="NSFont" size="14" name="Roboto-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="i2Q-gR-Bfx" firstAttribute="centerY" secondItem="RGj-Em-uFB" secondAttribute="centerY" id="3LV-Tb-Gsx"/>
+                                <constraint firstItem="uYr-pZ-2Fj" firstAttribute="centerY" secondItem="i2Q-gR-Bfx" secondAttribute="centerY" id="IEH-1d-UzR"/>
+                                <constraint firstItem="uYr-pZ-2Fj" firstAttribute="centerX" secondItem="i2Q-gR-Bfx" secondAttribute="centerX" id="PiT-f7-bix"/>
+                                <constraint firstAttribute="bottom" secondItem="i2Q-gR-Bfx" secondAttribute="bottom" constant="4" id="VHa-fs-o1Y"/>
+                                <constraint firstItem="uYr-pZ-2Fj" firstAttribute="height" secondItem="i2Q-gR-Bfx" secondAttribute="height" id="bv9-Hy-PKA"/>
+                                <constraint firstAttribute="trailing" secondItem="i2Q-gR-Bfx" secondAttribute="trailing" constant="4" id="fcW-1M-6X0"/>
+                                <constraint firstItem="i2Q-gR-Bfx" firstAttribute="centerX" secondItem="RGj-Em-uFB" secondAttribute="centerX" id="hef-u8-KRX"/>
+                                <constraint firstItem="uYr-pZ-2Fj" firstAttribute="width" secondItem="i2Q-gR-Bfx" secondAttribute="width" id="mW3-Fl-UtV"/>
+                                <constraint firstItem="i2Q-gR-Bfx" firstAttribute="leading" secondItem="RGj-Em-uFB" secondAttribute="leading" constant="4" id="n5R-tF-M7l"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Cyt-jj-f7U" firstAttribute="width" secondItem="dNW-9v-2fo" secondAttribute="width" id="J0j-1x-k1O"/>
+                        <constraint firstItem="RGj-Em-uFB" firstAttribute="width" secondItem="dNW-9v-2fo" secondAttribute="width" id="aUZ-cX-1pC"/>
+                        <constraint firstItem="jXf-Zo-doy" firstAttribute="width" secondItem="dNW-9v-2fo" secondAttribute="width" id="kZn-gZ-r4c"/>
+                        <constraint firstItem="GAE-Sq-ION" firstAttribute="width" secondItem="dNW-9v-2fo" secondAttribute="width" id="kp1-wV-YCo"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="dNW-9v-2fo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ARi-Ah-U5M"/>
+                <constraint firstItem="dNW-9v-2fo" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="Y42-3T-CiC"/>
+                <constraint firstItem="dNW-9v-2fo" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="eZ7-m0-Cfq"/>
+                <constraint firstItem="dNW-9v-2fo" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="t10-u3-3e7"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
@@ -29,6 +147,12 @@
                     <real key="value" value="10"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="abstractLabel" destination="uYr-pZ-2Fj" id="lEq-Tr-38U"/>
+                <outlet property="authorsLabel" destination="GAE-Sq-ION" id="LwX-qS-ulA"/>
+                <outlet property="titleLabel" destination="jXf-Zo-doy" id="9t0-sP-ufQ"/>
+            </connections>
+            <point key="canvasLocation" x="26" y="-25"/>
         </view>
     </objects>
 </document>
