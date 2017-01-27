@@ -22,6 +22,7 @@
 		7094C0EE1E12121200749582 /* CustomKolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7094C0EB1E12121200749582 /* CustomKolodaView.swift */; };
 		7094C0EF1E12121200749582 /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7094C0EC1E12121200749582 /* CustomOverlayView.swift */; };
 		7094C0F41E12189300749582 /* SwipeOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7094C0F31E12189300749582 /* SwipeOverlayView.swift */; };
+		70A5C0081E2BFB2E00BEB5B3 /* test-indexes.ris in Resources */ = {isa = PBXBuildFile; fileRef = 70A5C0071E2BFB2E00BEB5B3 /* test-indexes.ris */; };
 		70A99CB91E097BD000061025 /* PaperSessionUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A99CB81E097BD000061025 /* PaperSessionUITableViewController.swift */; };
 		70A99CBB1E09B87A00061025 /* AppToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A99CBA1E09B87A00061025 /* AppToolbarController.swift */; };
 		70A99CBD1E09B90F00061025 /* AppPageTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A99CBC1E09B90F00061025 /* AppPageTabBarController.swift */; };
@@ -31,6 +32,7 @@
 		70C3EC141E0AC6B5008368A8 /* PaperCollectionUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C3EC131E0AC6B5008368A8 /* PaperCollectionUITableViewController.swift */; };
 		70C3EC161E0ACCFB008368A8 /* AppSnackbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C3EC151E0ACCFB008368A8 /* AppSnackbarController.swift */; };
 		70C3EC181E0ACD6D008368A8 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C3EC171E0ACD6D008368A8 /* StatusBarController.swift */; };
+		70C904421E2AA40400081D8A /* BlurredOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C904411E2AA40400081D8A /* BlurredOverlayView.swift */; };
 		70CF5D551E0A10D30018027B /* PaperSessionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CF5D541E0A10D30018027B /* PaperSessionTableCell.swift */; };
 		70EDF2EE1E070DAD000D4F0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EDF2ED1E070DAD000D4F0D /* AppDelegate.swift */; };
 		70EDF2F31E070DAD000D4F0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70EDF2F11E070DAD000D4F0D /* Main.storyboard */; };
@@ -66,6 +68,7 @@
 		7094C0EB1E12121200749582 /* CustomKolodaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomKolodaView.swift; sourceTree = "<group>"; };
 		7094C0EC1E12121200749582 /* CustomOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
 		7094C0F31E12189300749582 /* SwipeOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeOverlayView.swift; sourceTree = "<group>"; };
+		70A5C0071E2BFB2E00BEB5B3 /* test-indexes.ris */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "test-indexes.ris"; sourceTree = "<group>"; };
 		70A99CB81E097BD000061025 /* PaperSessionUITableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperSessionUITableViewController.swift; sourceTree = "<group>"; };
 		70A99CBA1E09B87A00061025 /* AppToolbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppToolbarController.swift; sourceTree = "<group>"; };
 		70A99CBC1E09B90F00061025 /* AppPageTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppPageTabBarController.swift; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 		70C3EC131E0AC6B5008368A8 /* PaperCollectionUITableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperCollectionUITableViewController.swift; sourceTree = "<group>"; };
 		70C3EC151E0ACCFB008368A8 /* AppSnackbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSnackbarController.swift; sourceTree = "<group>"; };
 		70C3EC171E0ACD6D008368A8 /* StatusBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
+		70C904411E2AA40400081D8A /* BlurredOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurredOverlayView.swift; sourceTree = "<group>"; };
 		70CF5D541E0A10D30018027B /* PaperSessionTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperSessionTableCell.swift; sourceTree = "<group>"; };
 		70EDF2EA1E070DAD000D4F0D /* Researcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Researcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70EDF2ED1E070DAD000D4F0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 				70EDF2F91E070DAD000D4F0D /* Info.plist */,
 				700B4BD81E1F57E300451C40 /* GraphViewController.swift */,
 				700B4BDA1E1F5D6600451C40 /* ExamplesDefault.swift */,
+				70C904411E2AA40400081D8A /* BlurredOverlayView.swift */,
 			);
 			path = Researcher;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 				7062C6411E19E26600CF762C /* Roboto-Regular.ttf */,
 				7062C6421E19E26600CF762C /* Roboto-Thin.ttf */,
 				70EDF3281E0892FA000D4F0D /* test-cites.ris */,
+				70A5C0071E2BFB2E00BEB5B3 /* test-indexes.ris */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -312,6 +318,7 @@
 				70AB7CA91E1590E3001313F8 /* OverlayView.xib in Resources */,
 				7062C6441E19E26600CF762C /* Roboto-Light.ttf in Resources */,
 				70EDF3291E0892FA000D4F0D /* test-cites.ris in Resources */,
+				70A5C0081E2BFB2E00BEB5B3 /* test-indexes.ris in Resources */,
 				7062C6451E19E26600CF762C /* Roboto-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +394,7 @@
 				70EDF31C1E083326000D4F0D /* ObjectModels.swift in Sources */,
 				70A99CBD1E09B90F00061025 /* AppPageTabBarController.swift in Sources */,
 				70EDF31F1E08343B000D4F0D /* RISFileParser.swift in Sources */,
+				70C904421E2AA40400081D8A /* BlurredOverlayView.swift in Sources */,
 				7094C0F41E12189300749582 /* SwipeOverlayView.swift in Sources */,
 				7094C0EE1E12121200749582 /* CustomKolodaView.swift in Sources */,
 				700B4BDE1E200A8800451C40 /* RatingViewController.swift in Sources */,

@@ -5,48 +5,51 @@ import Material
 
 class RatingViewController: UIViewController {
     
-    @IBOutlet weak var placeholderView: UIView!
+    @IBOutlet weak var placeholderView: View!
     
     var paperSession: PaperSession?
     
     let sideSelectorHeight: CGFloat = 50
     
+    var isTopRounded = true
+    var isAllRounded = false
+    
     fileprivate var chart: Chart? // arc
     
     fileprivate func chart(horizontal: Bool) -> Chart {
-        
-        
-        var likes = 0.0
-        var dislikes = 0.0
+                
+        _ = 0.0
+        _ = 0.0
         var count = 0.0
         
-        if let paperSession = self.paperSession, let l = paperSession.likesCount.value, let d = paperSession.dislikesCount.value {
-            likes = Double(l)
-            dislikes = Double(d)
-            count = Double(paperSession.papers.count)
-        }
+        var barModels = [ChartStackedBarModel]()
         
-        
+        let zero = ChartAxisValueDouble(0)
         let labelSettings = ChartLabelSettings(font: ExamplesDefaults.labelFont)
         
-    
-        
-        let chartFrame = placeholderView.frame
         
         let likeColor = Color.green.base
         let dislikeColor = Color.blueGrey.base
-        
-        let zero = ChartAxisValueDouble(0)
-        let barModels = [
-            ChartStackedBarModel(constant: ChartAxisValueString("Likes", order: 1, labelSettings: labelSettings), start: zero, items: [
-                ChartStackedBarItemModel(quantity: likes, bgColor: likeColor),
-                ]),
-            ChartStackedBarModel(constant: ChartAxisValueString("Dislikes", order: 2, labelSettings: labelSettings), start: zero, items: [
-                ChartStackedBarItemModel(quantity: dislikes, bgColor: dislikeColor)
+
+        if let paperSession = self.paperSession {            
+            
+            let c = ChartStackedBarModel(constant: ChartAxisValueString("Likes", order: 1, labelSettings: labelSettings), start: zero, items: [
+                ChartStackedBarItemModel(quantity: Double(paperSession.likes()), bgColor: likeColor),
                 ])
-        ]
+            
+            barModels.append(c)
+            
+            let d = ChartStackedBarModel(constant: ChartAxisValueString("Dislikes", order: 2, labelSettings: labelSettings), start: zero, items: [
+                ChartStackedBarItemModel(quantity: Double(paperSession.dislikes()), bgColor: dislikeColor)
+                ])
+            
+            barModels.append(d)
+          
+            count = Double(paperSession.papers.count)
+        }
         
-        
+        let chartFrame = placeholderView.frame
+     
         let (axisValues1, axisValues2) = (
             stride(from: 0, through: count, by: 2).map {ChartAxisValueDouble(Double($0), labelSettings: labelSettings)},
             [ChartAxisValueString("", order: 0, labelSettings: labelSettings)] + barModels.map{$0.constant} + [ChartAxisValueString("", order: 3, labelSettings: labelSettings)]
@@ -87,13 +90,28 @@ class RatingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
          self.showChart(horizontal: false)
+        
+        if isTopRounded {
+            topCorners()
+        } else {
+            allCorners()
+        }
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-       
     }
-    class DirSelector: UIView {
+    
+    func topCorners() {
+        self.view.layer.roundCorners(corners: [.topLeft, .topRight], radius: 5.0)
+    }
+    
+    func allCorners() {
+        self.view.layer.roundCorners(corners: [.allCorners], radius: 5.0)
+    }
+
+    class DirSelector: View {
         
         let horizontal: UIButton
         let vertical: UIButton

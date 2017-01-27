@@ -8,7 +8,7 @@ class AppMenuController: MenuController {
     
     open override func prepare() {
         super.prepare()
-        view.backgroundColor = Color.blue
+        view.backgroundColor = Color.grey.lighten3
         
         prepareMenu()
     }
@@ -18,7 +18,7 @@ class AppMenuController: MenuController {
     fileprivate var searchButton: IconButton!
     
     fileprivate var nextButton: FlatButton!
-    
+   
     open override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Color.grey.lighten5

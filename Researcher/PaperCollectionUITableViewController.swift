@@ -7,21 +7,14 @@
 //
 
 import Foundation
-
-//
-//  PaperSessionUITableViewController.swift
-//  Researcher
-//
-//  Created by Anthony Perritano on 12/20/16.
-//  Copyright © 2016 Anthony Perritano. All rights reserved.
-//
-
-import Foundation
 import RealmSwift
+import Material
 
 class PaperCollectionUITableViewController: UITableViewController {
     
-    
+    fileprivate var addButton: FabButton!
+    fileprivate var helpMenuItem: MenuItem!
+    fileprivate var importMenuItem: MenuItem!
     var paperCollectionResults: Results<PaperCollection>?
     var paperCollectionNotification: NotificationToken? = nil
     var notificationTokens = [NotificationToken]()
@@ -38,6 +31,17 @@ class PaperCollectionUITableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareNotifications()
+        
+        view.backgroundColor = Color.grey.lighten5
+        
+        prepareAddButton()
+        prepareImportButton()
+        prepareHelpButton()
+    }
+    
+    open override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        prepareMenuController()
     }
     
     
@@ -132,3 +136,78 @@ extension PaperCollectionUITableViewController {
     }
     
 }
+
+extension PaperCollectionUITableViewController {
+    fileprivate func prepareAddButton() {
+        addButton = FabButton(image: Icon.cm.add, tintColor: .white)
+        addButton.pulseColor = .white
+        addButton.backgroundColor = Color.red.base
+        addButton.addTarget(self, action: #selector(handleToggleMenu), for: .touchUpInside)
+    }
+    
+    
+    fileprivate func prepareImportButton() {
+        importMenuItem = MenuItem()
+        importMenuItem.button.image = Icon.cm.pen
+        importMenuItem.button.tintColor = .white
+        importMenuItem.button.pulseColor = .white
+        importMenuItem.button.backgroundColor = Color.green.base
+        importMenuItem.button.depthPreset = .depth1
+        importMenuItem.title = "Import Papers (RIS File)"
+    }
+    
+    
+    fileprivate func prepareHelpButton() {
+        helpMenuItem = MenuItem()
+        helpMenuItem.button.image = Icon.cm.bell
+        helpMenuItem.button.tintColor = .white
+        helpMenuItem.button.pulseColor = .white
+        helpMenuItem.button.backgroundColor = Color.blue.base
+        helpMenuItem.title = "Reminders"
+    }
+    
+    fileprivate func prepareMenuController() {
+        guard let mc = menuController as? AppMenuController else {
+            return
+        }
+        
+        mc.menu.delegate = self
+        mc.menu.views = [addButton, importMenuItem, helpMenuItem]
+    }
+}
+
+extension PaperCollectionUITableViewController {
+    @objc
+    fileprivate func handleToggleMenu(button: Button) {
+        guard let mc = menuController as? AppMenuController else {
+            return
+        }
+        
+        if mc.menu.isOpened {
+            mc.closeMenu { (view) in
+                (view as? MenuItem)?.hideTitleLabel()
+            }
+        } else {
+            mc.openMenu { (view) in
+                (view as? MenuItem)?.showTitleLabel()
+            }
+        }
+    }
+}
+
+extension PaperCollectionUITableViewController: MenuDelegate {
+    func menu(menu: Menu, tappedAt point: CGPoint, isOutside: Bool) {
+        guard isOutside else {
+            return
+        }
+        
+        guard let mc = menuController as? AppMenuController else {
+            return
+        }
+        
+        mc.closeMenu { (view) in
+            (view as? MenuItem)?.hideTitleLabel()
+        }
+    }
+}
+

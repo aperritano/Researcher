@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>EasyAnimation.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Koloda.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,6 +77,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>139B28B57F1523CF34EE86E89F0A9CE4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>20151774CE2F5FA6B8126D4F5ED1C5FE</key>
 		<dict>
 			<key>primary</key>
@@ -87,12 +97,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>67455A3D91675B3EC2AD1B8173C4DDBE</key>
+		<key>393D87945227066706A380D30A33C03A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>902969B6221C5C11EAFCF46B12BCFEAF</key>
+		<key>3C3109B7C4BF2E519F19547CFBA90863</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4304279F62D26C2386238142A7B7495D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>61F6034254B7E196FF5E58C899ED3EA0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6C45874912A33175A541A21E86CBD1FA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8E55618701AE633F01B03027CFE694C8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,32 +132,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9FA49AED321A722E6DB3DAAB9B6D8FF1</key>
+		<key>A6A5DDD42A29B5DDC52C8D2B18192D51</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>BA287C1DC287EAA4A399B22703554187</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BDACE9E76BFF91287250FABA7354366D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D50A2F4D532798469208AD975C6976BB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D6B8F5E0E8403B6F25439DD316E5F561</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DE22853931165E49359A7FF9597AFBEB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

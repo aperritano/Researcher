@@ -29,10 +29,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let rootViewController = storyboard.instantiateViewController(withIdentifier: "paperCollectionUITableViewController") as! PaperCollectionUITableViewController
+        let collectionTableViewController = storyboard.instantiateViewController(withIdentifier: "paperCollectionUITableViewController") as! PaperCollectionUITableViewController
         
-        let menuController = AppMenuController(rootViewController: rootViewController)
+        let menuController = AppMenuController(rootViewController: collectionTableViewController)
         
+        //let menuController = AppMenuController(rootViewController: RootViewController())
+
         let app = AppNavigationController(rootViewController: menuController)
         
         let statusBar = AppStatusBarController(rootViewController: app)
@@ -120,7 +122,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
                     for (index, paper) in testData.enumerated() {
                         let p = Paper()
-                        p.index.value = index
+                        p.index = index
                         p.populateEndnote(paper)
                         paperSession.papers.append(p)
                     }

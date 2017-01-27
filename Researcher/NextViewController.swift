@@ -4,6 +4,7 @@ import Material
 import Koloda
 import PopupDialog
 import RealmSwift
+import EasyAnimation
 
 private let numberOfCards: Int = 1
 
@@ -11,25 +12,34 @@ class NextViewController: UIViewController {
     
     @IBOutlet weak var kolodaView: CustomKolodaView!
     
-    var paperIndex = 0
+    @IBOutlet weak var toolbarView: View!
+    
+    @IBOutlet weak var visualEffectView: UIVisualEffectView!
+    @IBOutlet weak var backgroundImage: UIImageView!
+    
+    @IBOutlet weak var cardStackView: UIStackView!
+    
+    var lastPaperIndex = 0
     var paperSession: PaperSession? {
         didSet {
             if let paperSession = self.paperSession {
                 
                 if let lastPaperIndex = paperSession.lastPaperIndex.value {
                     
-                    paperIndex = lastPaperIndex
+                    self.lastPaperIndex = lastPaperIndex
                     let predicate = NSPredicate(format: "index >= \(lastPaperIndex)")
                     
-                    paperDatasource = paperSession.papers.filter(predicate)
+                    paperDatasource = paperSession.papers.filter(predicate).sorted(byKeyPath: "index")
                     
                     LOG.debug("Papers \(self.paperDatasource?.count)")
                 } else {
                     
+                    self.lastPaperIndex = 0
                     let predicate = NSPredicate(format: "index >= 0")
-                    paperDatasource = paperSession.papers.filter(predicate)
+                    paperDatasource = paperSession.papers.filter(predicate).sorted(byKeyPath: "index")
                     
-                    LOG.debug("Papers \(self.paperDatasource?.count)")
+                    LOG.debug("NO SAVED Papers \(self.paperDatasource?.count)")
+                    
                 }
             }
         }
@@ -43,7 +53,7 @@ class NextViewController: UIViewController {
     @IBOutlet weak var likeCountLabel: UILabel!
     @IBOutlet weak var dislikeCountLabel: UILabel!
     
-    @IBOutlet weak var graphButton: FabButton!
+    @IBOutlet weak var graphButton: UIButton!
     
     var labelTitle: String = "" {
         didSet {
@@ -64,19 +74,20 @@ class NextViewController: UIViewController {
         kolodaView?.revertAction()
     }
     
-    @IBAction func showGraphPopup(_ sender: Button) {
+    @IBAction func showGraphPopup() {
         
         // Create a custom view controller
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//
-//        let graphViewController =  storyboard.instantiateViewController(withIdentifier: "graphViewController") as! GraphViewController
-
+        //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        //
+        //        let graphViewController =  storyboard.instantiateViewController(withIdentifier: "graphViewController") as! GraphViewController
+        
         let ratingVC = RatingViewController(nibName: "RatingViewController", bundle: nil)
         
         if let paperSession = self.paperSession {
             ratingVC.paperSession = paperSession
+            LOG.debug("paperSession \(paperSession)")
         }
-    
+        
         // Create the dialog
         let popup = PopupDialog(viewController: ratingVC, buttonAlignment: .horizontal, transitionStyle: .bounceDown, gestureDismissal: true)
         
@@ -84,7 +95,7 @@ class NextViewController: UIViewController {
         let buttonOne = DefaultButton(title: "CLOSE", height: 50) {
             //self.label.text = "You canceled the rating dialog"
         }
-    
+        
         // Add buttons to dialog
         popup.addButtons([buttonOne])
         
@@ -98,6 +109,8 @@ class NextViewController: UIViewController {
         super.init(coder: aDecoder)
     }
     
+    //MARK: CONTROLLER DID
+    
     open override func viewDidLoad() {
         super.viewDidLoad()
         prepareNavigationItem()
@@ -107,6 +120,12 @@ class NextViewController: UIViewController {
         
         self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
         self.view.setNeedsDisplay()
+        
+        if let ps = self.paperSession, ps.isDone == true {
+            dismissButtons()
+        } else {
+            showButtons()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -126,10 +145,66 @@ class NextViewController: UIViewController {
         navigationItem.detailLabel.tintColor = .white
     }
     
+    fileprivate func showSnackbar(withText text: String) {
+        guard let sc = snackbarController else {
+            return
+        }
+        
+        sc.snackbar.text = text
+        
+        _ = sc.animate(snackbar: .visible, delay: 1)
+        _ = sc.animate(snackbar: .hidden, delay: 4)
+    }
+    
     func updatePaperTotals(withIndex index:Int) {
-        if totalCountLabel != nil, let paperTotal = paperDatasource?.count {
+        if totalCountLabel != nil, let paperTotal = paperSession?.papers.count {
             totalCountLabel.text = "#\(index) of \(paperTotal)"
         }
+    }
+    
+    func showButtons() {
+        
+        self.cardStackView.isHidden = false
+        
+        UIView.animate(withDuration: 0.5, animations: {
+            
+            self.cardStackView.alpha = 1.0
+            
+        }, completion: {(finished: Bool) in
+            
+        })
+    }
+
+    func dismissButtons() {
+        
+        UIView.animate(withDuration: 0.5, animations: {
+        
+            self.cardStackView.alpha = 0.0
+
+        }, completion: {(finished: Bool) in
+        
+            self.cardStackView.isHidden = true
+            
+            let ratingVC = RatingViewController(nibName: "RatingViewController", bundle: nil)
+            
+            ratingVC.paperSession = self.paperSession
+            ratingVC.view.alpha = 0.0
+            ratingVC.view.center = self.view.center
+            ratingVC.allCorners()
+            
+            self.view.addSubview(ratingVC.view)
+            
+            self.visualEffectView.alpha = 0.0
+            self.visualEffectView.isHidden = false
+            self.backgroundImage.alpha = 0.0
+            self.backgroundImage.isHidden = false
+            
+            UIView.animate(withDuration: 0.5, animations: {
+                self.backgroundImage.alpha = 1.0
+                self.visualEffectView.alpha = 1.0
+                ratingVC.view.alpha = 1.0
+            })
+        })
     }
 }
 
@@ -137,53 +212,45 @@ class NextViewController: UIViewController {
 extension NextViewController: KolodaViewDelegate {
     
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
-        //        self.paperDatasource
-        //        let position = kolodaView.currentCardIndex
-        //        for i in 1...4 {
-        //            dataSource.append(UIImage(named: "Card_like_\(i)")!)
-        //        }
-        //        kolodaView.insertCardAtIndexRange(position..<position + 4, animated: true)
+        
     }
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
         
-        
-        if let paperSession = self.paperSession, let paperTotal = paperDatasource?.count {
+        if let paperSession = self.paperSession, let paper = self.paperDatasource?[index] {
             if let realm = realm {
                 try! realm.write {
                     
                     switch direction {
                     case .left:
-                        if var dislikes = paperSession.dislikesCount.value {
-                            dislikes += 1
-                            paperSession.dislikesCount.value = dislikes
-                        } else {
-                            paperSession.dislikesCount.value = 0
-                        }
+                        paper.isLiked.value = false
                     default:
-                        if var likes = paperSession.likesCount.value {
-                            likes += 1
-                            paperSession.likesCount.value = likes
-                        } else {
-                            paperSession.likesCount.value = 0
-                        }
+                        paper.isLiked.value = true
                     }
                     
-                    paperIndex += 1
-                    
-                    if paperIndex >= paperTotal {
-                        paperSession.isDone.value = true
-                    } else {
-                        paperSession.lastPaperIndex.value = paperIndex
-                        self.updatePaperTotals(withIndex: paperIndex + 1)
+                    if paper.index >= paperSession.papers.count - 1 {
+                        paperSession.isDone = true
+                        
+                        dismissButtons()
+                        
+                        self.showSnackbar(withText: "Congratulations! Complete! \(paperSession.papers.count) papers swiped.")
                     }
                     
+                    paperSession.lastPaperIndex.value = paper.index + 1
+                    
+                    switch paper.index {
+                    case 0:
+                        self.updatePaperTotals(withIndex: 2)
+                    default:
+                        self.updatePaperTotals(withIndex: paper.index + 2)
+
+                    }
+                    
+                    realm.add(paper, update: true)
                     realm.add(paperSession, update: true)
                 }
             }
         }
-        
-        
     }
     
     func koloda(_ koloda: KolodaView, draggedCardWithPercentage finishPercentage: CGFloat, in direction: SwipeResultDirection) {
@@ -194,6 +261,13 @@ extension NextViewController: KolodaViewDelegate {
 // MARK: KolodaViewDataSource
 extension NextViewController: KolodaViewDataSource {
     func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {
+        
+        if let paperSession = self.paperSession {
+            if paperSession.isDone {
+                return 0
+            }
+        }
+        
         if let paperTotal = self.paperDatasource?.count {
             return paperTotal
         }

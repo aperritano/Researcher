@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import RealmSwift
+import Material
 
 class BasicCardView: UIView {
     
@@ -17,6 +18,10 @@ class BasicCardView: UIView {
     @IBOutlet weak var authorsLabel: UILabel!
     
     @IBOutlet weak var abstractLabel: UITextView!
+    
+    @IBOutlet weak var cardView: View!
+    @IBOutlet weak var profileView: View!
+    @IBOutlet weak var indexLabel: UILabel!
     
     let kDefaultFontSize = 15.0
     
@@ -29,6 +34,7 @@ class BasicCardView: UIView {
                 
                 self.authorsLabel.text = joinedAuthors
                 self.abstractLabel.text = p.abstract
+                self.indexLabel.text = "\(p.index + 1)"
                 self.checkTextSize()
             }
             
@@ -48,9 +54,26 @@ class BasicCardView: UIView {
 
     }
     
+    func prepareLogo() {
+        
+       // profileView.depthPreset = .depth1
+        profileView.shapePreset = .circle
+        profileView.backgroundColor = Color.grey.base
+        
+        
+        cardView.depthPreset = .depth3
+        cardView.backgroundColor = .white
+     
+        authorsLabel.tintColor = Color.grey.base
+        
+    }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        prepareLogo()
+
     }
     
     override init(frame: CGRect) {
@@ -59,5 +82,6 @@ class BasicCardView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        
     }
 }

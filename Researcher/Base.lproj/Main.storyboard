@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D17a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D30a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="142"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lq0-Jl-tGC" id="zHt-Og-JQ8">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="141.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="141"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="o5m-8e-qBs">
@@ -229,7 +229,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ai1-hl-ebM">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Water-waves-wind" translatesAutoresizingMaskIntoConstraints="NO" id="Aab-N4-jUv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ai1-hl-ebM">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y8y-3y-nk9">
@@ -240,19 +243,19 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a43-fi-EBa" userLabel="KolodaView" customClass="KolodaView" customModule="Koloda">
-                                        <rect key="frame" x="4" y="12" width="406" height="603.66666666666663"/>
+                                        <rect key="frame" x="4" y="12" width="406" height="604"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="zPosition">
-                                                <real key="value" value="999"/>
+                                                <real key="value" value="500"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" translatesAutoresizingMaskIntoConstraints="NO" id="mKO-Xa-uXI" userLabel="ToolbarView">
-                                        <rect key="frame" x="4" y="619.66666666666652" width="406" height="112.33333333333337"/>
+                                    <view contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" translatesAutoresizingMaskIntoConstraints="NO" id="mKO-Xa-uXI" userLabel="ToolbarView" customClass="View" customModule="Material">
+                                        <rect key="frame" x="4" y="620" width="406" height="112"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Sc8-Nx-dvF">
-                                                <rect key="frame" x="0.0" y="15.666666666666742" width="406" height="81"/>
+                                                <rect key="frame" x="0.0" y="15" width="406" height="81"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Bsh-Hm-org">
                                                         <rect key="frame" x="8" y="8" width="65" height="65"/>
@@ -277,10 +280,7 @@
                                                             <constraint firstAttribute="width" secondItem="vRF-6p-OgS" secondAttribute="height" multiplier="1:1" id="d50-B6-Fif"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                        <state key="normal" image="bar_graph"/>
-                                                        <connections>
-                                                            <action selector="showGraphPopup:" destination="zlo-Og-kGr" eventType="touchUpInside" id="tVU-tt-syG"/>
-                                                        </connections>
+                                                        <state key="normal" image="ic_refresh"/>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#1000 of 1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8L-cy-CU2">
                                                         <rect key="frame" x="127" y="28.666666666666629" width="152" height="24"/>
@@ -290,14 +290,15 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMi-fC-Qj8" userLabel="BarButton" customClass="FabButton" customModule="Material">
                                                         <rect key="frame" x="291" y="25.666666666666629" width="30" height="30"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="GMi-fC-Qj8" secondAttribute="height" multiplier="1:1" id="2hY-on-pxS"/>
                                                             <constraint firstAttribute="width" constant="30" id="ZXz-Qx-yX5"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                         <state key="normal" image="bar_graph"/>
                                                         <connections>
-                                                            <action selector="showGraphPopup:" destination="zlo-Og-kGr" eventType="touchUpInside" id="Fga-Oj-12G"/>
+                                                            <action selector="showGraphPopup" destination="zlo-Og-kGr" eventType="touchUpInside" id="28h-dJ-PeJ"/>
                                                         </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="nlX-y6-wBC">
@@ -329,71 +330,55 @@
                                 </subviews>
                                 <edgeInsets key="layoutMargins" top="4" left="4" bottom="4" right="4"/>
                             </stackView>
+                            <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYD-5E-qri">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="HPr-4o-Ndp">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Aab-N4-jUv" firstAttribute="height" secondItem="fZL-wk-QZY" secondAttribute="height" id="3wI-ZC-q4t"/>
+                            <constraint firstItem="Aab-N4-jUv" firstAttribute="width" secondItem="fZL-wk-QZY" secondAttribute="width" id="8ek-zi-HgY"/>
+                            <constraint firstItem="wYD-5E-qri" firstAttribute="centerX" secondItem="fZL-wk-QZY" secondAttribute="centerX" id="DUY-IW-dj4"/>
                             <constraint firstItem="a43-fi-EBa" firstAttribute="height" secondItem="fZL-wk-QZY" secondAttribute="height" multiplier="0.82" id="IIU-i6-EpP"/>
                             <constraint firstItem="Ai1-hl-ebM" firstAttribute="width" secondItem="fZL-wk-QZY" secondAttribute="width" id="agt-x1-M0v"/>
                             <constraint firstItem="Ai1-hl-ebM" firstAttribute="centerY" secondItem="fZL-wk-QZY" secondAttribute="centerY" id="enV-Qq-DTd"/>
+                            <constraint firstItem="wYD-5E-qri" firstAttribute="height" secondItem="fZL-wk-QZY" secondAttribute="height" id="fec-R9-Tba"/>
                             <constraint firstItem="Ai1-hl-ebM" firstAttribute="height" secondItem="fZL-wk-QZY" secondAttribute="height" id="hdM-W4-s8S"/>
+                            <constraint firstItem="wYD-5E-qri" firstAttribute="centerY" secondItem="fZL-wk-QZY" secondAttribute="centerY" id="j9Z-AY-DSM"/>
                             <constraint firstItem="Ai1-hl-ebM" firstAttribute="centerX" secondItem="fZL-wk-QZY" secondAttribute="centerX" id="kzG-ZJ-pVh"/>
+                            <constraint firstItem="Aab-N4-jUv" firstAttribute="centerX" secondItem="fZL-wk-QZY" secondAttribute="centerX" id="qyH-7J-RkB"/>
+                            <constraint firstItem="wYD-5E-qri" firstAttribute="width" secondItem="fZL-wk-QZY" secondAttribute="width" id="r7Y-9p-aLU"/>
+                            <constraint firstItem="Aab-N4-jUv" firstAttribute="centerY" secondItem="fZL-wk-QZY" secondAttribute="centerY" id="saG-MZ-UjZ"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="graphButton" destination="GMi-fC-Qj8" id="997-RR-ZJY"/>
+                        <outlet property="backgroundImage" destination="Aab-N4-jUv" id="A5X-Xq-669"/>
+                        <outlet property="cardStackView" destination="Ai1-hl-ebM" id="Xhj-ca-0QR"/>
+                        <outlet property="graphButton" destination="GMi-fC-Qj8" id="aOg-Dx-VGN"/>
                         <outlet property="kolodaView" destination="a43-fi-EBa" id="wy4-s1-rfp"/>
+                        <outlet property="toolbarView" destination="mKO-Xa-uXI" id="I7y-wW-B2Z"/>
                         <outlet property="totalCountLabel" destination="e8L-cy-CU2" id="N9D-ex-PYX"/>
+                        <outlet property="visualEffectView" destination="wYD-5E-qri" id="tjc-se-N9c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvQ-6i-ivK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1124.6376811594205" y="-99.456521739130437"/>
         </scene>
-        <!--Graph View Controller-->
-        <scene sceneID="LYw-Eg-eQ6">
-            <objects>
-                <viewController storyboardIdentifier="graphViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KZi-1l-hLg" customClass="GraphViewController" customModule="Researcher" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SdA-4M-emJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="kLy-mO-Sli"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="nXe-wu-cod">
-                        <rect key="frame" x="0.0" y="0.0" width="340" height="500"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azS-4O-EhM">
-                                <rect key="frame" x="10" y="0.0" width="320" height="500"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="mV7-hm-eDj"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="azS-4O-EhM" firstAttribute="centerX" secondItem="nXe-wu-cod" secondAttribute="centerX" id="LG6-Fm-Bbq"/>
-                            <constraint firstItem="azS-4O-EhM" firstAttribute="height" secondItem="nXe-wu-cod" secondAttribute="height" id="TRC-AC-ZXM"/>
-                            <constraint firstItem="azS-4O-EhM" firstAttribute="centerY" secondItem="nXe-wu-cod" secondAttribute="centerY" id="r6o-u6-qMe"/>
-                        </constraints>
-                    </view>
-                    <value key="contentSizeForViewInPopover" type="size" width="320" height="500"/>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="340" height="500"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rYL-ow-DTt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1866.6666666666667" y="-96.195652173913047"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="bar_graph" width="516" height="471"/>
+        <image name="Water-waves-wind" width="2592" height="1728"/>
+        <image name="bar_graph" width="24" height="24"/>
         <image name="ic_close_48pt" width="48" height="48"/>
         <image name="ic_favorite_48pt" width="48" height="48"/>
+        <image name="ic_refresh" width="48" height="48"/>
     </resources>
 </document>

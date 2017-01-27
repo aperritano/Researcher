@@ -57,8 +57,7 @@ DP  - http://hcibib.org
 DB  - HCI Bibliography
 ER  -
 TY  - CONF
-T1  - The influence of aesthetics in usability testing: the case of dual-domain
-products
+T1  - The influence of aesthetics in usability testing: the case of dual-domain products
 A1  - Sonderegger, Andreas
 A1  - Uebelbacher, Andreas
 A1  - Pugliese, Manuela
@@ -91,8 +90,7 @@ Interaction
 PY  - 2008/02/18
 SP  - xv
 EP  - xxv
-KW  - ambient media, augmented reality, interaction design, tangible user
-interfaces, ubiquitous computing
+KW  - ambient media, augmented reality, interaction design, tangible user interfaces, ubiquitous computing
 UR  - http://doi.acm.org/10.1145/1347390.1347392
 AB  - Tangible user interfaces (TUIs) provide physical form to digital information
 and computation, facilitating the direct manipulation of bits. Our goal in TUI
@@ -106,12 +104,10 @@ DP  - http://hcibib.org
 DB  - HCI Bibliography
 ER  -
 TY  - CONF
-T1  - AudioCubes: a distributed cube tangible interface based on interaction range
-for sound design
+T1  - AudioCubes: a distributed cube tangible interface based on interaction range for sound design
 A1  - Schiettecatte, Bert
 A1  - Vanderdonckt, Jean
-T2  - Proceedings of the 2nd International Conference on Tangible and Embedded
-Interaction
+T2  - Proceedings of the 2nd International Conference on Tangible and Embedded Interaction
 PY  - 2008/02/18
 SP  - 3
 EP  - 10
@@ -138,8 +134,7 @@ A1  - Schl&ouml;mer, Thomas
 A1  - Poppinga, Benjamin
 A1  - Henze, Niels
 A1  - Boll, Susanne
-T2  - Proceedings of the 2nd International Conference on Tangible and Embedded
-Interaction
+T2  - Proceedings of the 2nd International Conference on Tangible and Embedded Interaction
 PY  - 2008/02/18
 SP  - 11
 EP  - 14
@@ -171,13 +166,11 @@ T1  - Studying applications for touch-enabled mobile phone keypads
 A1  - Holleis, Paul
 A1  - Huhtala, Jussi
 A1  - H&auml;kkil&auml;, Jonna
-T2  - Proceedings of the 2nd International Conference on Tangible and Embedded
-Interaction
+T2  - Proceedings of the 2nd International Conference on Tangible and Embedded Interaction
 PY  - 2008/02/18
 SP  - 15
 EP  - 18
-KW  - capacitive touch sensing, haptic input, mobile phone interaction, small
-device user interface, user studies
+KW  - capacitive touch sensing, haptic input, mobile phone interaction, small device user interface, user studies
 UR  - http://doi.acm.org/10.1145/1347390.1347396
 AB  - We present a platform to evaluate mobile phone applications that make use of
 an additional dimension for key presses. Using capacitive sensors on each key,
@@ -194,13 +187,11 @@ T1  - Using actuated devices in location-aware systems
 A1  - Fraser, Mike
 A1  - Cater, Kirsten
 A1  - Duff, Paul
-T2  - Proceedings of the 2nd International Conference on Tangible and Embedded
-Interaction
+T2  - Proceedings of the 2nd International Conference on Tangible and Embedded Interaction
 PY  - 2008/02/18
 SP  - 19
 EP  - 26
-KW  - actuators, human-robot interaction, location awareness, physicality,
-pointing, robotics
+KW  - actuators, human-robot interaction, location awareness, physicality, pointing, robotics
 UR  - http://doi.acm.org/10.1145/1347390.1347397
 AB  - Location-aware systems have traditionally left mobility to the user through
 carrying, supporting and manipulating the device itself. This design choice has
@@ -223,16 +214,14 @@ DP  - http://hcibib.org
 DB  - HCI Bibliography
 ER  -
 TY  - CONF
-T1  - Marble track audio manipulator (MTAM): a tangible user interface for audio
-composition
+T1  - Marble track audio manipulator (MTAM): a tangible user interface for audio composition
 A1  - Bean, Alex
 A1  - Siddiqi, Sabina
 A1  - Chowdhury, Anila
 A1  - Whited, Billy
 A1  - Shaer, Orit
 A1  - Jacob, Robert J. K.
-T2  - Proceedings of the 2nd International Conference on Tangible and Embedded
-Interaction
+T2  - Proceedings of the 2nd International Conference on Tangible and Embedded Interaction
 PY  - 2008/02/18
 SP  - 27
 EP  - 30
@@ -256,8 +245,7 @@ T1  - A tangible interface for browsing digital photo collections
 A1  - Hsu, Shuo Hsiu
 A1  - Jumpertz, Sylvie
 A1  - Cubaud, Pierre
-T2  - Proceedings of the 2nd International Conference on Tangible and Embedded
-Interaction
+T2  - Proceedings of the 2nd International Conference on Tangible and Embedded Interaction
 PY  - 2008/02/18
 SP  - 31
 EP  - 32
@@ -277,8 +265,7 @@ A1  - Lee, Hyun-Jean
 A1  - Kim, Hyungsin
 A1  - Gupta, Gaurav
 A1  - Mazalek, Ali
-T2  - Proceedings of the 2nd International Conference on Tangible and Embedded
-Interaction
+T2  - Proceedings of the 2nd International Conference on Tangible and Embedded Interaction
 PY  - 2008/02/18
 SP  - 33
 EP  - 36
@@ -306,8 +293,7 @@ T1  - Posey: instrumenting a poseable hub and strut construction toy
 A1  - Weller, Michael Philetus
 A1  - Do, Ellen Yi-Luen
 A1  - Gross, Mark D.
-T2  - Proceedings of the 2nd International Conference on Tangible and Embedded
-Interaction
+T2  - Proceedings of the 2nd International Conference on Tangible and Embedded Interaction
 PY  - 2008/02/18
 SP  - 39
 EP  - 46

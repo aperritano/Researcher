@@ -25,7 +25,7 @@ class AppPageTabBarController: PageTabBarController {
     
     open override func prepare() {
         super.prepare()
-        view.backgroundColor = Color.blue.darken2
+       // view.backgroundColor = Color.blue.darken2
         delegate = self
         preparePageTabBar()
     }
@@ -34,7 +34,7 @@ class AppPageTabBarController: PageTabBarController {
         pageTabBarAlignment = .top
         pageTabBar.tintColor = .white
         pageTabBar.dividerColor = Color.blue.darken2
-        pageTabBar.lineColor = Color.blue.lighten3
+        pageTabBar.lineColor = Color.white
         pageTabBar.lineAlignment = .bottom
         pageTabBar.backgroundColor = Color.blue.darken2
     }
@@ -46,6 +46,7 @@ class AppPageTabBarController: PageTabBarController {
         navigationItem.detailLabel.textAlignment = .left
         navigationItem.titleLabel.textColor = .white
         navigationItem.detailLabel.textColor = .white
+        navigationItem.backButton.tintColor = .white
     }
 }
 

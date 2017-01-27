@@ -14,6 +14,7 @@ target 'Researcher' do
   pod 'SwiftCharts'
   pod 'PopupDialog'
   pod 'Charts'
+  pod 'EasyAnimation'
 end
 
 post_install do |installer|

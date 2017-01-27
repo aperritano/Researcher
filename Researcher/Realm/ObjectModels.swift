@@ -5,7 +5,8 @@ class PaperCollection: Object {
     dynamic var id = UUID().uuidString
     dynamic var last_modified = Date()
     dynamic var title = ""
-    let isFav = RealmOptional<Bool>()
+    dynamic var isFav = false
+    
     var paperSessions = List<PaperSession>()
     
     override static func primaryKey() -> String? {
@@ -42,14 +43,12 @@ class PaperSession: Object {
     dynamic var id = UUID().uuidString
     dynamic var last_modified = Date()
     dynamic var title = ""
+    dynamic var isDone = false
     
-    let likesCount = RealmOptional<Int>()
-    let dislikesCount = RealmOptional<Int>()
     let lastPaperIndex = RealmOptional<Int>()
-    let isDone = RealmOptional<Bool>()
     
     var papers = List<Paper>()
-
+    
     override static func primaryKey() -> String? {
         return "id"
     }
@@ -64,15 +63,28 @@ class PaperSession: Object {
         } else {
             var count = 0
             for p in papers {
-                if let liked = p.isLiked.value {
-                    if liked {
-                        count += 1
-                    }
+                if let isLiked = p.isLiked.value, isLiked == true {
+                    count += 1                    
                 }
             }
             return count
         }
     }
+    
+    func dislikes() -> Int {
+        if papers.isEmpty {
+            return 0
+        } else {
+            var count = 0
+            for p in papers {
+                if let isLiked = p.isLiked.value, isLiked == false {
+                    count += 1
+                }
+            }
+            return count
+        }
+    }
+    
 }
 
 class Paper: Object {
@@ -108,9 +120,9 @@ class Paper: Object {
     dynamic var year = ""
     
     let isLiked = RealmOptional<Bool>()
-    let isRead = RealmOptional<Bool>()
-    let isFav = RealmOptional<Bool>()
-    let index = RealmOptional<Int>()
+    dynamic var isRead = false
+    dynamic var isFav = false
+    dynamic var index = 0
     
     func populateEndnote( _ properties: [String:AnyObject]) {
         //self.rawEntry = properties as NSObject?
